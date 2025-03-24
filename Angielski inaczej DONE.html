@@ -1,0 +1,1561 @@
+<!-- wp:html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak naprawdę działa język angielski</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #3498db;
+        }
+        h4 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .blue {
+            color: blue;
+        }
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        .purple {
+            color: purple;
+        }
+        .orange {
+            color: orange;
+        }
+        .brown {
+            color: brown;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .mark {
+            background-color: #f2f2f2;
+            padding: 2px 0;
+        }
+        .example {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            margin: 15px 0;
+        }
+        .note {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .situation {
+            background-color: #fff8e8;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 3px solid #f39c12;
+        }
+        .tips {
+            background-color: #efffef;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 3px solid #2ecc71;
+        }
+        .translation-note {
+            background-color: #ffe7e7;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 3px solid #e74c3c;
+        }
+
+        /* Style zakładek - głównych sekcji */
+        .tab-container {
+            margin: 25px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .tab-nav {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f1f1f1;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-button {
+            background-color: #f1f1f1;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.3s;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .tab-button:hover {
+            background-color: #ddd;
+        }
+        
+        .tab-button.active {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        /* Style dla pod-zakładek w sekcjach */
+        .subtab-container {
+            margin: 15px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .subtab-nav {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f8f8f8;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .subtab-button {
+            background-color: #f8f8f8;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 14px;
+            font-size: 15px;
+            transition: 0.3s;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .subtab-button:hover {
+            background-color: #e8e8e8;
+        }
+        
+        .subtab-button.active {
+            background-color: #2980b9;
+            color: white;
+        }
+        
+        .subtab-content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        /* Styl dla spisu treści */
+        .toc {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 3px solid #3498db;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 15px;
+        }
+        
+        .toc li {
+            margin-bottom: 8px;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #2980b9;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsywność na małych ekranach */
+        @media (max-width: 600px) {
+            .tab-button, .subtab-button {
+                width: 100%;
+                display: block;
+            }
+            
+            .tab-nav, .subtab-nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Jak naprawdę działa język angielski</h1>
+    
+    <!-- Spis treści -->
+    <div class="toc">
+        <h3>Spis treści</h3>
+        <ul>
+            <li><a href="#wstep">1. Wstęp: Jak naprawdę działa język angielski</a></li>
+            <li><a href="#fundamenty">2. Fundamenty komunikacji w angielskim</a></li>
+            <li><a href="#terazniejszosc">3. Jak mówimy o tym, co się dzieje teraz</a></li>
+            <li><a href="#przeszlosc">4. Jak mówimy o tym, co się działo wcześniej</a></li>
+            <li><a href="#przyszlosc">5. Wyrażanie przyszłości</a></li>
+            <li><a href="#zamiennosc">6. Ta sama treść, różne formy - zamienność w angielskim</a></li>
+            <li><a href="#praktyka">7. Praktyczne zastosowanie - mów jak chcesz</a></li>
+        </ul>
+    </div>
+    
+    <!-- Główny system zakładek -->
+    <div class="tab-container">
+        <div class="tab-nav">
+            <button class="tab-button active" onclick="openTab(event, 'tab-wstep')">1. Wstęp</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-fundamenty')">2. Fundamenty</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-terazniejszosc')">3. Teraźniejszość</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-przeszlosc')">4. Przeszłość</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-przyszlosc')">5. Przyszłość</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-zamiennosc')">6. Zamienność</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-praktyka')">7. Praktyka</button>
+        </div>
+
+        <!-- Zakładka: Wstęp -->
+        <div id="tab-wstep" class="tab-content" style="display: block;">
+            <h2 id="wstep">1. Wstęp: Jak naprawdę działa język angielski</h2>
+            <p>Cześć! Cieszę się, że sięgnąłeś po ten materiał. Jeśli kiedykolwiek czułeś frustrację ucząc się angielskich czasów, jeśli miałeś wrażenie, że to niekończąca się lista reguł do zapamiętania – ten przewodnik jest właśnie dla Ciebie.</p>
+
+            <p><strong>Oto prawda</strong>: angielski wcale nie jest tak skomplikowany, jak Cię uczono.</p>
+
+            <p>Większość tradycyjnych metod nauczania przedstawia czasy angielskie jako dwanaście oddzielnych bytów, które musisz opanować jeden po drugim. Lista wyjątków, zastosowań i niuansów wydaje się nie mieć końca. Ale co jeśli powiem Ci, że to wszystko można zrozumieć w znacznie prostszy sposób?</p>
+
+            <p>W rzeczywistości <strong>w angielskim istnieją tylko dwa prawdziwe czasy</strong> – teraźniejszy i przeszły. Nie martw się – o przyszłości też porozmawiamy. Przyjdzie na nią czas! 😉</p>
+
+            <p>W tym przewodniku pojawią się nazwy jak "Present Simple" czy "Past Perfect Continuous" - <strong>nie przejmuj się nimi!</strong> Jeśli nigdy wcześniej ich nie słyszałeś - świetnie! Zaczniesz od czystej karty. Jeśli już je znasz - zobaczysz je w zupełnie nowym świetle.</p>
+
+            <p>Te tradycyjne nazwy to etykiety stworzone dawno temu przez językoznawców. Używam ich, bo funkcjonują w świecie nauki języka angielskiego, ale pokażę Ci, co naprawdę się za nimi kryje. Wyobraź to sobie jak przepis kulinarny - z kilku podstawowych składników można stworzyć wiele różnych potraw. Podobnie w angielskim - z kilku prostych elementów (być, mieć, końcówki -ing, -ed) tworzymy różne konstrukcje, którym nadano te skomplikowane nazwy.</p>
+
+            <p>Skupimy się na zrozumieniu składników i ich kombinacji, a nie na wkuwaniu nazw i abstrakcyjnych reguł. Więc gdy zobaczysz taką nazwę - potraktuj ją po prostu jako informację "tu używamy takiej kombinacji składników" i nic więcej. Z czasem zauważysz, jak logiczny i uporządkowany jest ten system! 😊</p>
+            
+            <div class="translation-note">
+                <h3>Ważna informacja o tłumaczeniach w tym przewodniku</h3>
+                <p>W całym materiale będziesz spotykać różne rodzaje tłumaczeń:</p>
+                <ul>
+                    <li><strong>Praktyczne tłumaczenia</strong> - takie, których używamy na co dzień (np. "Pracuję", "Pracowałem")</li>
+                    <li><strong>Dosłowne tłumaczenia</strong> - pokazujące podstawową strukturę języka angielskiego (np. "Jestem pracujący", "Mam odbyte pracowanie")</li>
+                </ul>
+                <p>Dosłowne tłumaczenia celowo brzmią nienaturalnie po polsku. Formy takie jak "mam skończone pracę" (zamiast "mam skończoną pracę") pokazują podstawową strukturę angielskich konstrukcji bez dopasowywania ich do polskiej gramatyki. To dzięki nim łatwiej zauważysz, jak są zbudowane angielskie czasy.</p>
+                <p>W niektórych przypadkach, jak np. przy konstrukcji "going to", pokazuję też jej rzeczywiste znaczenie ("wybieram się"), które różni się od tego, czego często uczą w szkołach ("zamierzam").</p>
+            </div>    
+            <p>W tym przewodniku:</p>
+            <ul>
+                <li>Pokażę Ci, jak naprawdę działają angielskie konstrukcje czasowe</li>
+                <li>Wyjaśnię ich logiczną strukturę bez konieczności wkuwania list reguł</li>
+                <li>Wykorzystam kolorowe oznaczenia, by wyraźnie pokazać, z czego składa się każda forma</li>
+                <li>Przedstawię praktyczne przykłady z codziennych sytuacji</li>
+            </ul>
+
+            <div class="note mark">
+                <h3>System kolorowych oznaczeń</h3>
+                <p>Aby ułatwić Ci zrozumienie struktury angielskich konstrukcji czasowych, używam następujących kolorów:</p>
+                
+                <ul>
+                    <li><span class="blue">Niebieski</span> - formy czasownika "być" (am, is, are, was, were, be)</li>
+                    <li><span class="green">Zielony</span> - formy czasownika "mieć" (have, has, had)</li>
+                    <li><span class="red">Czerwony</span> - końcówki czasów gramatycznych (-s/-es w czasie teraźniejszym, -ed/-d w czasie przeszłym) oraz nieregularne formy przeszłe</li>
+                    <li><span class="purple">Fioletowy</span> - końcówka -ing, tworząca formy wyrażające procesy i czynności w trakcie</li>
+                    <li><span class="orange">Pomarańczowy</span> - formy dokonane, opisujące rezultat lub stan (-ed, lub formy nieregularne)</li>
+                    <li><span class="brown">Brązowy</span> - will i podobne słowa (can, should), które zawsze zachowują tę samą formę</li>
+                </ul>
+                
+                <p>Dzięki tym kolorom zobaczysz na pierwszy rzut oka, że tzw. "czasy angielskie" to w rzeczywistości tylko kombinacje kilku prostych elementów. To jak klocki, które można składać na różne sposoby!</p>
+            </div>
+
+            <p>Zamiast zapamiętywania abstrakcyjnych reguł, skupimy się na zrozumieniu, dlaczego Anglicy mówią tak, a nie inaczej. Odkryjesz, że za każdą formą kryje się prosta logika, która ma swoje korzenie w tym, jak ludzie postrzegają rzeczywistość – jako fakty, procesy, dokonania lub odbyte doświadczenia. Ten sposób jest skuteczny, ponieważ odwołuje się do zrozumienia, a nie mechanicznego zapamiętywania.</p>
+
+            <p>Gotowy na przełom w nauce języka angielskiego? Zaczynajmy!</p>
+        </div>
+
+        <!-- Zakładka: Fundamenty -->
+        <div id="tab-fundamenty" class="tab-content">
+            <h2 id="fundamenty">2. Fundamenty komunikacji w angielskim</h2>
+            <p>Zanim zagłębimy się w szczegóły, przyjrzyjmy się podstawowym elementom, z których zbudowane są wszystkie tzw. czasy. To jak poznanie składników przed przygotowaniem potrawy - gdy je poznasz, wszystko stanie się prostsze! 😊</p>
+
+            <!-- Pod-zakładki dla fundamentów -->
+            <div class="subtab-container">
+                <div class="subtab-nav">
+                    <button class="subtab-button active" onclick="openSubtab(event, 'fundamenty-czasowniki')">Czasowniki podstawowe</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'fundamenty-ing')">Formy z -ING</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'fundamenty-dokonane')">Formy dokonane</button>
+                </div>
+
+                <!-- Pod-zakładka: Czasowniki podstawowe -->
+                <div id="fundamenty-czasowniki" class="subtab-content" style="display: block;">
+                    <h3>Czasowniki podstawowe - budulec angielskiego</h3>
+                    <p>W angielskim możemy wyróżnić trzy rodzaje najważniejszych czasowników:</p>
+
+                    <h4>1. Być</h4>
+                    <ul>
+                        <li>Bezokolicznik: to <span class="blue">be</span> (być)</li>
+                        <li>Teraźniejsze: <span class="blue">am/is/are</span> (jestem, jesteś, jest, jesteśmy, jesteście, są)</li>
+                        <li>Przeszłe: <span class="blue">was/were</span> (byłem, byłaś, był, była, było, byliśmy, byłyście, byli, były)</li>
+                    </ul>
+
+                    <p>Ciekawostka: "być" to najtrudniejszy czasownik w języku angielskim, bo ma najwięcej form (to be, am, is, are, was, were). Paradoksalnie, tego najtrudniejszego uczymy się już na początku! A jednak angielskie "być" jest nadal prostsze niż polskie - w angielskim mamy tylko 6 form łącznie z bezokolicznikiem, podczas gdy w polskim jest ich aż kilkanaście.</p>
+
+                    <p>W języku angielskim, podobnie jak w polskim, każdy czasownik ma swoją podstawową formę - bezokolicznik. W przeciwieństwie do polskiego, gdzie mamy końcówki takie jak "-ać", "-ić", "-eć" (np. "czytać", "robić", "widzieć"), w angielskim bezokolicznik tworzymy dodając "to" przed podstawową formą czasownika: to be (być), to have (mieć), <strong>to work</strong> (pracować).</p>
+
+                    <div class="note mark">
+                        <h4>Formy skrócone</h4>
+                        <p>W języku angielskim powszechnie używa się form skróconych. Nie są one "mniej poprawne" czy tylko nieformalne - to standardowy sposób komunikacji stosowany przez rodzimych użytkowników:</p>
+                        <ul>
+                            <li>I <span class="blue">am</span> → I'm</li>
+                            <li>You/We/They <span class="blue">are</span> → You're/We're/They're</li>
+                            <li>He/She/It <span class="blue">is</span> → He's/She's/It's</li>
+                            <li>I <span class="blue">am</span> not → I'm not</li>
+                            <li>He/She/It <span class="blue">is</span> not → isn't / He's not / She's not / It's not</li>
+                            <li>You/We/They <span class="blue">are</span> not → aren't / You're not / We're not / They're not</li>
+                        </ul>
+                        <p>Formy skrócone znaczą dokładnie to samo co pełne - różnią się tylko stylem. Używaj ich swobodnie w mowie i większości sytuacji pisemnych.</p>
+                        <p>W dalszej części przewodnika zobaczysz więcej form skróconych, które zawsze będą podawane w nawiasach, np. <span class="green">have</span> NOT (haven't), <span class="brown">will</span> NOT (won't), <strong><span class="underline">do<span class="red">es</span></span></strong> NOT (doesn't). Pamiętaj, że <strong>wszystkie</strong> te skrócone formy są standardowym, codziennym sposobem mówienia i pisania w języku angielskim.</p>
+                    </div>
+
+                    <h4>2. Mieć</h4>
+                    <ul>
+                        <li>Teraźniejszne: <span class="green">have</span>/<span class="green">has</span> (mam, masz, ma, mamy, macie, mają)</li>
+                        <li>Przeszłe: <span class="green">had</span> (miałem, miałaś, miał, miała, miało, mieliśmy, miałyście, mieli, miały)</li>
+                    </ul>
+                    
+                    <p>Zauważ, jak prosto to wygląda w porównaniu z polskim! W czasie przeszłym angielskie <span class="green">had</span> zastępuje wszystkie nasze formy: miałem, miałaś, miał, miała, miało, mieliśmy, miałyście, mieli, miały.</p>
+
+                    <h4>3. Zwykłe czasowniki</h4>
+                    <p>Mają tylko jedną końcówkę w czasie teraźniejszym: <span class="red">-s</span> lub <span class="red">-es</span> (choć wygląda na dwie, to w istocie ta sama końcówka w różnych wariantach fonetycznych).</p>
+                    <ul>
+                        <li>Teraźniejszne: <strong>work</strong> (pracuję, pracujesz, pracujemy, pracujecie, pracują) / <strong>work</strong><span class="red">s</span> (pracuje)</li>
+                        <li>Przykład z <span class="red">-es</span>: <strong>watch</strong> (oglądam, oglądasz, oglądamy, oglądacie, oglądają) / <strong>watch</strong><span class="red">es</span> (ogląda)</li>
+                    </ul>
+
+                    <p>W czasie przeszłym mamy dwa typy czasowników:</p>
+                    <ul>
+                        <li>Regularne: przyjmują końcówkę <span class="red">-d</span> lub <span class="red">-ed</span>, np. <strong>work</strong><span class="red">ed</span> (pracowałem, pracowałaś, pracował, itd.), <strong>play</strong><span class="red">ed</span> (grałem, grałaś, grał, itd.)</li>
+                        <li>Nieregularne: mają swoje osobne formy, np. <strong>go</strong> → <span class="red">went</span> (szedłem, szłaś, szedł, itd.), <strong>see</strong> → <span class="red">saw</span> (widziałem, widziałaś, widział, itd.)</li>
+                    </ul>
+
+                    <p>Każdy czasownik ma tylko dwie prawdziwe formy czasowe! W angielskim nie musisz się martwić dziesiątkami odmian dla różnych osób - to ogromne uproszczenie w porównaniu z polskim.</p>
+
+                    <p>To właśnie te proste formy tworzą podstawę dla wszystkich tzw. "12 czasów angielskich". W rzeczywistości mamy do czynienia tylko z kilkoma elementami, które można ze sobą łączyć na różne sposoby - to dużo prostsze niż uczenie się każdego "czasu" jako oddzielnego bytu!</p>
+                </div>
+
+                <!-- Pod-zakładka: Formy z -ING -->
+                <div id="fundamenty-ing" class="subtab-content">
+                    <h4>O formach z końcówką -ING: <span class="purple">wyróżnione na fioletowo</span></h4>
+                    <p>W angielskim możemy do zwykłego czasownika (np. <strong>work</strong> - pracować) dodać końcówkę <span class="purple">-ing</span>, tworząc <strong>work</strong><span class="purple">ing</span>. Ta forma nie jest już zwykłym czasownikiem - staje się czymś nowym, co może działać na różne sposoby.</p>
+
+                    <p>Gdy dodamy <span class="purple">-ing</span>, nowa forma może oznaczać:</p>
+                    <ul>
+                        <li>"pracujący/pracująca/pracujące" (<strong>work</strong><span class="purple">ing</span> = pracujący/pracująca/pracujące) - <em>"Widziałem go pracującego w ogrodzie"</em></li>
+                        <li>"pracując" (<strong>work</strong><span class="purple">ing</span> = pracując) - <em>"Pracując w ogrodzie, znalazł stary zegarek"</em></li>
+                        <li>"pracowanie" (<strong>work</strong><span class="purple">ing</span> = pracowanie) - <em>"Pracowanie w ogrodzie to przyjemność"</em></li>
+                    </ul>
+                    <p>Zauważ, że wszystkie te formy opisują proces w trakcie - coś dynamicznego, co trwa, rozwija się, dzieje się. Ta perspektywa jest kluczowa dla zrozumienia angielskich konstrukcji czasowych.</p>
+
+                    <p>Co ciekawe, rodzimi użytkownicy angielskiego bardzo lubią te formy z -ing. Podczas gdy po polsku powiemy "lubię czytać książki", Anglicy preferują "I like <strong>read</strong><span class="purple">ing</span> books" (lubię czytanie książek). Szczególnie upodobali sobie mówienie o tym, że ktoś jest "coś robiący" - konstrukcja, która dla nas brzmi nieco dziwnie, ale w angielskim jest całkowicie naturalna. Z tego właśnie upodobania wywodzą się wszystkie tzw. czasy "Continuous". W tych czasach wykorzystują oni głównie dwa z tych tłumaczeń: "robiący/robiąca/robiące" i "robienie".</p>
+
+                    <div class="note mark">
+                        <p>Niektóre czasowniki rzadziej pojawiają się w konstrukcjach wykorzystujących formy z końcówką -ing. Dotyczy to głównie czasowników opisujących stany czy cechy, a nie aktywne działania, np. know (wiedzieć), believe (wierzyć), love (kochać), understand (rozumieć), seem (wydawać się), belong (należeć). Zamiast "I am knowing" powiemy po prostu "I know" (Wiem).</p>
+                        <p>Ale język jest żywy! W codziennej mowie usłyszysz czasem "I'm loving this song" (Uwielbiam tę piosenkę) czy nawet McDonald's ze swoim "I'm loving it".</p>
+                    </div>
+                </div>
+
+                <!-- Pod-zakładka: Formy dokonane -->
+                <div id="fundamenty-dokonane" class="subtab-content">
+                    <h4>O formach dokonanych: <span class="orange">wyróżnione na pomarańczowo</span></h4>
+                    <p>W angielskim jest jeszcze jedna ważna forma - kiedy mówimy o czymś skończonym, zrobionym, dokonanym. Tworzymy ją dodając końcówkę <span class="orange">-ed</span> do zwykłego czasownika (np. <strong>finish</strong><span class="orange">ed</span> - skończone) lub używając nieregularnych form (np. <span class="orange">done</span> - zrobione, <span class="orange">written</span> - napisane).</p>
+
+                    <p>Uwaga, ciekawostka! Ta forma wygląda identycznie jak czasownik w czasie przeszłym (<strong>finish</strong><span class="red">ed</span> - skończyłem), ale pełni zupełnie inną funkcję - dlatego oznaczamy ją innym kolorem. W formie dokonanej nie opisujemy czynności, ale <strong>stan</strong> lub <strong>rezultat</strong>.</p>
+
+                    <p>Przykłady:</p>
+                    <ul>
+                        <li>Formy regularne: <strong>finish</strong><span class="orange">ed</span> (skończone), <strong>close</strong><span class="orange">d</span> (zamknięte)</li>
+                        <li>Formy nieregularne: <span class="orange">done</span> (zrobione), <span class="orange">written</span> (napisane), <span class="orange">seen</span> (widziane)</li>
+                    </ul>
+
+                    <p>Najprostsze zdania, w których używamy tych form to: "To jest skończone" (This is <strong>finish</strong><span class="orange">ed</span>), "To jest zrobione" (This is <span class="orange">done</span>). Te same formy są używane w opisach stanów: "Byłem zmęczony" (I was <strong>tire</strong><span class="orange">d</span>), "Ona była zadowolona" (She was <strong>please</strong><span class="orange">d</span>).</p>
+                    <ul>
+                        <li>Regularne: <strong>finish</strong><span class="orange">ed</span> = skończone</li>
+                        <li>Nieregularne: <span class="orange">done</span> = zrobione, <span class="orange">written</span> = napisane, <span class="orange">seen</span> = widziane</li>
+                    </ul>
+
+                    <p>Najprostsze zdania, w których tych form używamy, to zdania typu "To jest skończone" (This is <strong>finish</strong><span class="orange">ed</span>), "To jest zrobione" (This is <span class="orange">done</span>). Te same formy są używane w opisach stanów: "Byłem zmęczony" (I was <strong>tire</strong><span class="orange">d</span>), "Ona była zadowolona" (She was <strong>please</strong><span class="orange">d</span>).</p>
+
+                    <p>Ciekawa sprawa! Te formy z <span class="orange">-ed</span> czy nieregularne jak <span class="orange">done</span> nie są czasownikami - opisują raczej stan rzeczy. Dlatego właśnie używamy ich z "mieć": "mam zrobione", "miałem skończone". To trochę jak po polsku, gdy mówimy "mam posprzątane" zamiast "posprzątałem".</p>
+                    
+                    <p><strong>Wszystkie "czasy" w angielskim to tak naprawdę kombinacje tych prostych elementów.</strong></p>
+
+                    <p>Czas więc przejść od teorii do praktyki i zobaczyć, jak te proste elementy łączą się w całość! Zaczynamy prawdziwą przygodę! 🚀</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zakładka: Teraźniejszość -->
+        <div id="tab-terazniejszosc" class="tab-content">
+            <h2 id="terazniejszosc">3. Jak mówimy o tym, co się dzieje teraz</h2>
+            <p>W języku angielskim mamy kilka sposobów na mówienie o teraźniejszości. Każdy z nich pokazuje rzeczywistość z nieco innej perspektywy. Przyjrzyjmy się im bliżej!</p>
+
+            <!-- Pod-zakładki dla teraźniejszości -->
+            <div class="subtab-container">
+                <div class="subtab-nav">
+                    <button class="subtab-button active" onclick="openSubtab(event, 'teraz-fakty')">Proste fakty</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'teraz-byc')">Być teraz</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'teraz-robic')">Być robiącym</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'teraz-miec')">Mieć coś teraz</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'teraz-zrobione')">Mieć zrobione</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'teraz-odbyte')">Mieć odbyte robienie</button>
+                </div>
+
+                <!-- Zawartość pod-zakładek dla teraźniejszości -->
+                <div id="teraz-fakty" class="subtab-content" style="display: block;">
+                    <h3>Proste fakty: "I <strong>work</strong> here" = "Pracuję tutaj"</h3>
+                    <p>Najprostszy sposób mówienia o teraźniejszości to po prostu stwierdzanie faktów. Tutaj na razie nie widzimy wielkiej różnicy między polskim i angielskim, ale należy zaznaczyć, że stwierdzanie faktów o teraźniejszości nie równa się opisywaniu tego, co się właśnie dzieje (o tym trochę później).</p>
+
+                    <p>W tradycyjnej nomenklaturze nazywa się to "Present Simple" (teraźniejszy prosty) - bo czasownik używany w tego typu zdaniach jest w prostej formie teraźniejszej.</p>
+                        
+                    <ul>
+                        <li>I <strong>work</strong> here = Ja pracuję tutaj</li>
+                        <li>You <strong>play</strong> tennis = Ty grasz w tenisa / Wy gracie w tenisa</li>
+                        <li>Water <strong>boil</strong><span class="red">s</span> at 100°C = Woda wrze w 100°C</li>
+                        <li>She <strong>live</strong><span class="red">s</span> in London = Ona mieszka w Londynie</li>
+                        <li>He <strong>speak</strong><span class="red">s</span> French = On mówi po francusku</li>
+                        <li>It <strong>work</strong><span class="red">s</span> well = Ono działa dobrze</li>
+                        <li>We <strong>play</strong> football = My gramy w piłkę nożną</li>
+                        <li>They <strong>work</strong> hard = Oni pracują ciężko</li>
+                    </ul>
+                    
+                    <p>Zauważyłeś specjalną <span class="red">końcówkę -s</span>? Dodajemy <span class="red">-s</span> do czasownika, kiedy mówimy o jednej osobie lub rzeczy (on, ona, ono). To jedyna zmiana w odmianie czasownika w czasie teraźniejszym - znacznie prościej niż w polskim, gdzie każda osoba ma własną końcówkę! Dla czasowników kończących się na -ch, -sh, -s, -x, -z oraz -o dodajemy <span class="red">-es</span>, np. watch → watch<span class="red">es</span>, go → go<span class="red">es</span>.</p>
+                    
+                    <div class="situation mark">
+                        <h4>Mówimy też o przyszłości używając teraźniejszości</h4>
+                        <p>Tak jak w języku polskim, używając teraźniejszości możemy też mówić o przyszłości. Dzieje się tak, gdy mówimy o czymś, co już teraz jest ustalone, zaplanowane, co jest faktem już teraz - chociaż wydarzy się dopiero w przyszłości:</p>
+                        <ul>
+                            <li><strong>Rozkłady jazdy:</strong> "The train <strong>leave</strong><span class="red">s</span> at 8 am on Thursday" (Pociąg odjeżdża o 8 rano w czwartek) - już teraz jest faktem, że według rozkładu pociąg odjedzie o 8</li>
+                            <li><strong>Harmonogramy pracy:</strong> "I <strong>work</strong> from 8 am to 4 pm on Tuesday" (Pracuję od 8 do 16 we wtorek) - to już ustalone</li>
+                            <li><strong>Wydarzenia z kalendarza:</strong> "The meeting <strong>start</strong><span class="red">s</span> at 10 tomorrow" (Spotkanie zaczyna się o 10 jutro) - tak zaplanowano</li>
+                        </ul>
+                        <p>Wszystkie te zdania mówią o przyszłości, ale używają czasu teraźniejszego - dokładnie tak jak w polskim! Oczywiście możemy te same treści wyrazić używając innych konstrukcji, ale o tym później.</p>
+                    </div>
+                    
+                    <p><strong>Najpierw ważna informacja:</strong> <strong>do</strong> to również normalny czasownik oznaczający "robić" czy "wykonywać czynność", np. "I do this every day" (Robię to każdego dnia), "He does this every day" (On robi to każdego dnia).</p>
+
+                    <p><strong>DO</strong>/<strong>DOes</strong> to jeden z niewielu czasowników, którego nie możemy przetłumaczyć jednym słowem tak, aby powstało sensowne, zrozumiałe zdanie, jeśli używamy go w pytaniach i przeczeniach. Można uznać, że znaczy to coś w stylu „czy dzieje się tak że..." lub „czy faktem jest, że..." Dlatego pozostaniemy przy standardowych tłumaczeniach.</p>
+
+                    <p>Ale jak to się stało, że pojawia się w pytaniach? Otóż w angielskim jest specjalny typ zdań twierdzących, tzw. zdania akcentujące. Używa się ich, gdy chcemy podkreślić, że coś naprawdę ma miejsce. W polskim używamy do tego intonacji lub słowa "naprawdę":</p>
+                    <ul>
+                        <li>"I <strong><span class="underline">DO</span></strong> like pizza!" = "Ja <strong>NAPRAWDĘ</strong> lubię pizzę!" (a nie "Ja <strong>ROBIĘ</strong> lubić pizzę" - co nie ma sensu)</li>
+                    </ul>
+
+                    <p>Z tych właśnie zdań akcentujących <strong><span class="underline">DO</span></strong>/<strong><span class="underline">DO<span class="red">es</span></span></strong> "przywędrowały" do pytań i przeczeń. Kiedy chcemy utworzyć pytanie, przesuwamy je na początek zdania:</p>
+
+                    <ul>
+                        <li><strong><span class="underline">DO</span></strong> you <strong>work</strong> here? = Czy ty pracujesz tutaj?</li>
+                        <li><strong><span class="underline">DO<span class="red">es</span></span></strong> she <strong>live</strong> in London? = Czy ona mieszka w Londynie?</li>
+                        <li><strong><span class="underline">DO</span></strong> they <strong>like</strong> coffee? = Czy oni lubią kawę?</li>
+                    </ul>
+
+                    <p>Zauważ, że <strong><span class="underline">DO<span class="red">es</span></span></strong> to po prostu <strong><span class="underline">DO</span></strong> z dodaną końcówką <span class="red">-es</span>, tak samo jak w przypadku zwykłych czasowników w trzeciej osobie liczby pojedynczej. Kiedy używamy <strong><span class="underline">DO<span class="red">es</span></span></strong>, główny czasownik wraca do formy podstawowej (bez <span class="red">-s</span>): "<strong><span class="underline">DO<span class="red">es</span></span></strong> she <strong>live</strong>" (nie "lives").</p>
+
+                    <p>W przeczeniach dodajemy NOT po <strong><span class="underline">DO</span></strong>/<strong><span class="underline">DO<span class="red">es</span></span></strong>:</p>
+
+                    <ul>
+                        <li>I <strong><span class="underline">DO</span></strong> NOT (don't) <strong>work</strong> here = Ja nie pracuję tutaj</li>
+                        <li>She <strong><span class="underline">DO<span class="red">es</span></span></strong> NOT (doesn't) <strong>live</strong> in London = Ona nie mieszka w Londynie</li>
+                        <li>They <strong><span class="underline">DO</span></strong> NOT (don't) <strong>speak</strong> English = Oni nie mówią po angielsku</li>
+                    </ul>
+
+                    <p>Ciekawostka: Ponieważ <strong>do</strong> jest też normalnym czasownikiem, możemy stworzyć takie zdanie jak <strong>"I <span class="underline">DO</span> do this every day"</strong>, co oznacza "Ja <strong>NAPRAWDĘ</strong> robię to każdego dnia". A w pytaniu: <strong><span class="underline">"DO</span> you do it every day?"</strong> czyli "Czy ty to robisz każdego dnia?"</p>
+                </div>
+
+                <div id="teraz-byc" class="subtab-content">
+                    <h3>Być teraz: "I <span class="blue">am</span> happy" = "Jestem szczęśliwy"</h3>
+                    <p>Czasownik <span class="blue">być</span> to jeden z najczęściej używanych czasowników w angielskim (tu nadal jest to "Present Simple" czyli teraźniejszy prosty, bo czasownik jest w podstawowej formie teraźniejszej):</p>
+                    <ul>
+                        <li>I <span class="blue">am</span> happy = Ja jestem szczęśliwy</li>
+                        <li>You <span class="blue">are</span> late = Ty jesteś spóźniony(-a) / Wy jesteście spóźnieni</li>
+                        <li>He <span class="blue">is</span> hungry = On jest głodny</li>
+                        <li>She <span class="blue">is</span> beautiful = Ona jest piękna</li>
+                        <li>It <span class="blue">is</span> broken = Ono jest zepsute</li>
+                        <li>We <span class="blue">are</span> ready = My jesteśmy gotowi</li>
+                        <li>They <span class="blue">are</span> at home = Oni są w domu</li>
+                    </ul>
+
+                    <p>W pytaniach przestawiamy <span class="blue">am/is/are</span> na początek:</p>
+                    <ul>
+                        <li><span class="blue">Am</span> I late? = Czy ja jestem spóźniony? (dosłownie: Jestem ja spóźniony?)</li>
+                        <li><span class="blue">Is</span> she at home? = Czy ona jest w domu? (dosłownie: Jest ona w domu?)</li>
+                        <li><span class="blue">Are</span> they hungry? = Czy oni są głodni? (dosłownie: Są oni głodni?)</li>
+                    </ul>
+
+                    <p>Zauważ, że robimy dokładnie to samo, co z <strong><span class="underline">DO</span></strong>/<strong><span class="underline">DO<span class="red">es</span></span></strong>, tylko tutaj czasownik, którego potrzebujemy, jest już w zdaniu twierdzącym. <strong>Ta zasada przestawiania czasownika na początek przy tworzeniu pytań będzie się powtarzać we wszystkich konstrukcjach.</strong></p>
+                    
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="blue">am</span> NOT (I'm not) tired = Ja nie jestem zmęczony (dosłownie: Ja jestem nie zmęczony)</li>
+                        <li>She <span class="blue">is</span> NOT (isn't) here = Ona nie jest tutaj (dosłownie: Ona jest nie tutaj)</li>
+                        <li>They <span class="blue">are</span> NOT (aren't) happy = Oni nie są szczęśliwi (dosłownie: Oni są nie szczęśliwi)</li>
+                    </ul>
+                    
+                    <p>Zauważ ciekawą rzecz - po polsku mówimy "nie jestem szczęśliwy", ale jeśli przyjrzysz się uważnie angielskiej konstrukcji, to wyraźnie widać, że mówią oni "ja jestem nie szczęśliwy" (I am NOT happy). To świetny sposób na zapamiętanie, gdzie wstawić "not". Możesz też zaimponować tą obserwacją na imprezie – mało kto zauważa, że w angielskim właściwie nie ma zdań przeczących w takim sensie jak w polskim! Przeczenie dotyczy nie czasownika, a tego co po nim. 😉</p>
+                </div>
+
+                <div id="teraz-robic" class="subtab-content">
+                    <h3>Być robiącym: "I <span class="blue">am</span> <strong>work</strong><span class="purple">ing</span>" = "Pracuję"</h3>
+                    <p>Oto nasza pierwsza konstrukcja, gdzie angielski pokazuje swoją odmienność! Nazywana tradycyjnie "Present Continuous" (teraźniejszy ciągły), ta struktura pokazuje proces toczący się w teraźniejszości. To właśnie tak Anglicy mówią o tym, co się właśnie dzieje.</p>
+
+                    <p>Zauważ różnicę: po polsku powiemy po prostu "pracuję", a po angielsku dosłownie "jestem pracujący". Zamiast zwykłego czasownika używają połączenia dwóch elementów: <span class="blue">być</span> + czasownik z końcówką <span class="purple">-ing</span>. To zmienia perspektywę - podkreśla, że czynność jest w trakcie, trwa, rozwija się.</p>
+                    <ul>
+                        <li>I <span class="blue">am</span> <strong>work</strong><span class="purple">ing</span> = Ja pracuję (dosłownie: Ja jestem pracujący)</li>
+                        <li>You <span class="blue">are</span> <strong>study</strong><span class="purple">ing</span> = Ty uczysz się / Wy uczycie się (dosłownie: Ty jesteś uczący(-a) się / Wy jesteście uczący się)</li>
+                        <li>She <span class="blue">is</span> <strong>cook</strong><span class="purple">ing</span> = Ona gotuje (dosłownie: Ona jest gotująca)</li>
+                        <li>They <span class="blue">are</span> <strong>play</strong><span class="purple">ing</span> = Oni grają (dosłownie: Oni są grający)</li>
+                    </ul>
+
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Używamy tej formy, gdy mówimy o procesie, który właśnie trwa. Na przykład:</p>
+                        <ul>
+                            <li>Żona pyta cię przez telefon: "Co robisz?" - odpowiadasz: "I <span class="blue">am</span> <strong>cook</strong><span class="purple">ing</span> dinner" (Gotuję obiad) (dosłownie: Jestem gotujący obiad)</li>
+                            <li>Kolega zagląda do twojego pokoju i pyta, co robisz - odpowiadasz: "I <span class="blue">am</span> <strong>read</strong><span class="purple">ing</span> a book" (Czytam książkę) (dosłownie: Jestem czytający książkę)</li>
+                        </ul>
+
+                        <p>Ta forma jest również używana, gdy mówimy o procesach, które trwają obecnie w naszym życiu, nawet jeśli nie wykonujemy ich dokładnie w tej chwili:</p>
+                        <ul>
+                            <li>"I <span class="blue">am</span> <strong>learn</strong><span class="purple">ing</span> to play guitar" (Uczę się grać na gitarze) (dosłownie: Jestem uczący się aby grać na gitarze) - chociaż w tym momencie rozmowy nie trzymam gitary, to jestem w trakcie procesu nauki</li>
+                            <li>"She <span class="blue">is</span> <strong>study</strong><span class="purple">ing</span> medicine" (Ona studiuje medycynę) (dosłownie: Ona jest studiująca medycynę) - to obecny etap jej życia, proces który trwa</li>
+                        </ul>
+
+                        <p>Ta forma świetnie sprawdza się również, gdy chcemy podkreślić sam proces - skupić się na czynności, a nie tylko stwierdzić fakt. Na przykład:</p>
+                        <ul>
+                            <li>Zamiast "He smokes" (On pali) mówimy "He <span class="blue">is</span> <strong>smok</strong><span class="purple">ing</span> again!" (On znowu pali!) (dosłownie: On jest palący znowu!) - skupiamy się na tej czynności, podkreślamy ją, bo na przykład nas to denerwuje, lub sie martwimy o kogoś</li>
+                            <li>"She <span class="blue">is</span> always <strong>talk</strong><span class="purple">ing</span> during movies" (Ona zawsze gada podczas filmów) (dosłownie: Ona jest zawsze gadająca podczas filmów) - zaznaczamy, że coś się powtarza i zwracamy na to uwagę</li>
+                        </ul>
+                        
+                        <h4>Present Continuous do mówienia o przyszłości</h4>
+                        <p>Tak jak wcześniej w Present Simple, i tu możemy użyć teraźniejszości, aby mówić o przyszłości. W angielskim najczęściej mówi się tak w odniesieniu do własnych planów:</p>
+                        <ul>
+                            <li>Kolega pyta, co robisz w piątek - odpowiadasz: "I <span class="blue">am</span> <strong>play</strong><span class="purple">ing</span> football on Friday" (Gram w piłkę nożną w piątek) (dosłownie: Jestem grający w piłkę nożną w piątek)</li>
+                            <li>Szef pyta o plany na przyszły tydzień - odpowiadasz: "I <span class="blue">am</span> <strong>work</strong><span class="purple">ing</span> from home next week" (Pracuję z domu w przyszłym tygodniu) (dosłownie: Jestem pracujący z domu w przyszłym tygodniu)</li>
+                        </ul>
+                        <p>W obu przypadkach mówisz o przyszłości, używając czasu teraźniejszego!</p>
+                    </div>
+                    
+                    <p>W pytaniach przestawiamy <span class="blue">am/is/are</span> na początek:</p>
+                    <ul>
+                        <li><span class="blue">Am</span> I <strong>speak</strong><span class="purple">ing</span> too fast? = Czy ja mówię za szybko? (dosłownie: Jestem ja mówiący za szybko?)</li>
+                        <li><span class="blue">Is</span> she <strong>sleep</strong><span class="purple">ing</span>? = Czy ona śpi? (dosłownie: Jest ona śpiąca?)</li>
+                        <li><span class="blue">Are</span> they <strong>work</strong><span class="purple">ing</span>? = Czy oni pracują? (dosłownie: Są oni pracujący?)</li>
+                    </ul>
+                    
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="blue">am</span> NOT <strong>work</strong><span class="purple">ing</span> = Ja nie pracuję (dosłownie: Ja jestem nie pracujący)</li>
+                        <li>She <span class="blue">is</span> NOT <strong>sleep</strong><span class="purple">ing</span> = Ona nie śpi (dosłownie: Ona jest nie śpiąca)</li>
+                        <li>They <span class="blue">are</span> NOT <strong>play</strong><span class="purple">ing</span> = Oni nie grają (dosłownie: Oni są nie grający)</li>
+                    </ul>
+                </div>
+
+                <div id="teraz-miec" class="subtab-content">
+                    <h3>Mieć coś teraz: "I <span class="green">have</span> a dog" = "Mam psa"</h3>
+                    <p>Czasownik <span class="green">have</span> pełni w angielskim dwie różne role. Gdy używamy go do mówienia o posiadaniu rzeczy (jak w przykładzie "I <span class="green">have</span> a dog"), zachowuje się jak zwykły czasownik - podobnie jak "work", "play" czy "live". Jest to po prostu czas Present Simple (teraźniejszy prosty).</p>
+
+                    <p>Dlatego też - tak jak przy innych zwykłych czasownikach - pytania i przeczenia tworzymy za pomocą <strong><span class="underline">DO</span></strong>/<strong><span class="underline">DO<span class="red">es</span></span></strong>:</p>
+                    <ul>
+                        <li>I <span class="green">have</span> a car = Ja mam samochód</li>
+                        <li>She <span class="green">has</span> a brother = Ona ma brata</li>
+                        <li>We <span class="green">have</span> time = My mamy czas</li>
+                        <li>They <span class="green">have</span> two cats = Oni mają dwa koty</li>
+                    </ul>
+                    
+                    <p>W pytaniach używamy <strong><span class="underline">DO</span></strong>/<strong><span class="underline">DO<span class="red">es</span></span></strong>:</p>
+                    <ul>
+                        <li><strong><span class="underline">Do</span></strong> you <strong><span class="green">have</span></strong> a car? = Czy ty masz samochód?</li>
+                        <li><strong><span class="underline">Do<span class="red">es</span></span></strong> she <strong><span class="green">have</span></strong> time? = Czy ona ma czas?</li>
+                        <li><strong><span class="underline">Do</span></strong> they <strong><span class="green">have</span></strong> children? = Czy oni mają dzieci?</li>
+                    </ul>
+
+                    <p>W przeczeniach:</p>
+                    <ul>
+                        <li>I <strong><span class="underline">do</span></strong> NOT (don't) <strong><span class="green">have</span></strong> a car = Ja nie mam samochodu</li>
+                        <li>She <strong><span class="underline">do<span class="red">es</span></span></strong> NOT (doesn't) <strong><span class="green">have</span></strong> time = Ona nie ma czasu</li>
+                        <li>They <strong><span class="underline">do</span></strong> NOT (don't) <strong><span class="green">have</span></strong> pets = Oni nie mają zwierząt domowych</li>
+                    </ul>
+                </div>
+
+                <div id="teraz-zrobione" class="subtab-content">
+                    <h3>Mieć zrobione: "I <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span>" = "Skończyłem"</h3>
+                    <p>Teraz dochodzimy do konstrukcji, która odkrywa nam zupełnie nową perspektywę. W niektórych regionach Polski usłyszysz wyrażenia typu "mam obiad zjedzony" czy "mam już wyprane" - choć nie są częścią standardowego języka polskiego, doskonale ilustrują logikę angielskich czasów Perfect (dokonanych).</p>
+
+                    <p>W tej konstrukcji nie mówimy po prostu "zrobiłem coś", ale podkreślamy, że <strong>mamy</strong> coś <strong>zrobione</strong> - jakbyśmy w pewnym momencie zajętego dnia obejrzeli się za siebie i sprawdzili, ile zadań z listy już mamy odhaczonych. <strong>W polskim najczęściej tłumaczymy to po prostu jako czas przeszły, tracąc nieco tę specyficzną perspektywę.</strong></p>
+
+                    <p>Ta struktura (tradycyjnie "Present Perfect Simple", teraźniejszy dokonany prosty - czasownik have jest w formie teraźniejszej a tuż po nim mamy formę dokonaną prostą bez <span class="purple">ing</span>) pokazuje, że coś jest dokonane do teraz:</p>
+                    <ul>
+                        <li>I <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span> my work = Ja skończyłem swoją pracę (dosłownie: Ja mam skończone swoją pracę)</li>
+                        <li>You <span class="green">have</span> <strong>learn</strong><span class="orange">ed</span> a lot = Ty nauczyłeś(-aś) się dużo (dosłownie: Ty masz nauczone się dużo)</li>
+                        <li>She <span class="green">has</span> <strong>visit</strong><span class="orange">ed</span> Paris = Ona odwiedziła Paryż (dosłownie: Ona ma odwiedzone Paryża)</li>
+                        <li>They <span class="green">have</span> <span class="orange">eaten</span> all the cake = Oni zjedli całe ciasto (dosłownie: Oni mają zjedzone całe ciasto)</li>
+                    </ul>
+                    
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Czytasz książkę, docierasz do strony 20 i mówisz: "I <span class="green">have</span> <strong>read</strong> 20 pages" (Przeczytałem 20 stron) (dosłownie:Ja mam przeczytane 20 stron)</li>
+                            <li>Ktoś pyta, czy znasz Francję. Odpowiadasz: "Yes, I <span class="green">have</span> <strong>visit</strong><span class="orange">ed</span> France twice" (Tak, odwiedziłem Francję dwa razy) (dosłownie: Tak, ja mam odwiedzone Francję dwa razy)</li>
+                            <li>Szef pyta o projekt. Odpowiadasz: "I <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span> the project" (Skończyłem ten projekt) (dosłownie: Ja mam skończone ten projekt)</li>
+                        </ul>
+                        <p>We wszystkich tych przypadkach mówisz o czymś, co jest już zrobione, dokonane - masz to "zaliczone".</p>
+                    </div>
+                    
+                    <p>W pytaniach przestawiamy <span class="green">HAVE/HAS</span> na początek:</p>
+                    <ul>
+                        <li><span class="green">Have</span> you <strong>finish</strong><span class="orange">ed</span>? = Czy ty skończyłeś(-aś)? (dosłownie: Masz ty skończone?)</li>
+                        <li><span class="green">Has</span> she <strong>visit</strong><span class="orange">ed</span> Paris? = Czy ona odwiedziła Paryż? (dosłownie: Ma ona odwiedzone Paryż?)</li>
+                        <li><span class="green">Have</span> they <span class="orange">eaten</span> yet? = Czy oni już zjedli? (dosłownie: Mają oni zjedzone już?)</li>
+                    </ul>
+                    
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="green">have</span> NOT (haven't) <strong>finish</strong><span class="orange">ed</span> = Ja nie skończyłem (dosłownie: Ja mam nie skończone)</li>
+                        <li>She <span class="green">has</span> NOT (hasn't) <strong>visit</strong><span class="orange">ed</span> Paris = Ona nie odwiedziła Paryża (dosłownie: Ona ma nie odwiedzone Paryż)</li>
+                        <li>They <span class="green">have</span> NOT (haven't) <span class="orange">eaten</span> yet = Oni jeszcze nie zjedli (dosłownie: Oni mają nie zjedzone jeszcze)</li>
+                    </ul>
+
+                    <div class="note mark">
+                        <p>Tu warto wspomnieć jeszcze o jednej popularnej konstrukcji angielskiej: "have got" / "has got". Często używa się jej do mówienia o posiadaniu rzeczy. Kiedy mówimy "I have got a dog", to dosłownie oznacza "Mam uzyskane psa". Logiczne jest, że skoro mam psa uzyskane, to go mam - więc w sumie nie ma różnicy, jak to powiem.</p>
+
+                        <p>Ciekawe, prawda? W szkołach często uczą "have got" jako jakiejś specjalnej, magicznej konstrukcji, a to po prostu zwyczajny Present Perfect od czasownika "get"! Wymyślono dla tego osobną kategorię, jakby to było coś zupełnie innego, a tak naprawdę działa dokładnie według zasad, które właśnie poznajemy. Po prostu Anglicy tak często używali "have got" w znaczeniu posiadania, że stało się to osobnym zwrotem. To trochę jak gdyby ktoś próbował Cię przekonać, że "mam kupione" to jakaś wyjątkowa, specjalna konstrukcja w polskim, wymagająca osobnego rozdziału w podręczniku! 😉</p>
+                        
+                        <p>Przykłady:</p>
+                        <ul>
+                            <li>I <span class="green">have</span> got a new car = Mam nowy samochód (dosłownie: Mam uzyskane nowy samochód)</li>
+                            <li>She <span class="green">has</span> got a bicycle = Ona ma rower (dosłownie: Ona ma uzyskane rower)</li>
+                        </ul>
+                        
+                        <p>Ta konstrukcja jest szczególnie popularna w brytyjskim angielskim i często skracana: "I've got", "She's got".</p>
+                        
+                        <p>Słowo "<strong>get</strong>" (czas przeszły to "<span class="red">got</span>", a forma dokonana "<span class="orange">got</span>" lub "<span class="orange">gotten</span>" w amerykańskim angielskim) najczęściej jest tłumaczone jako „dostać". Dzieje się tak zapewne dlatego, że kiedy tłumaczymy je na język polski, to zazwyczaj w takim kontekście, że „dostać" pasuje jak ulał. Na przykład "I have <span class="orange">got</span> a raise" – Dostałem podwyżkę.</p>
+                        
+                        <p>Na tę chwilę warto zapamiętać, że dwa najbardziej elastyczne znaczenia "<strong>get</strong>" to po polsku:</p>
+                        <ul>
+                            <li><strong>Uzyskać</strong> - jak w "I <span class="green">have</span> <span class="orange">got</span> a new job" – Dostałem/zdobyłem nową pracę (dosłownie: Ja mam uzyskane nową pracę)</li>
+                            <li><strong>Stać się</strong> - jak w "I <span class="red">got</span> sick" – Zachorowałem (dosłownie: Ja stałem się chory)</li>
+                        </ul>
+                        
+                        <p>Słowo "<strong>get</strong>" szerzej omówimy w innych materiałach, ponieważ jest to jeden z najbardziej wszechstronnych czasowników w języku angielskim. 😊</p>
+                    </div>
+                </div>
+
+                <div id="teraz-odbyte" class="subtab-content">
+                    <h3>Mieć odbyte robienie: "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span>" = "Pracuję (od jakiegoś czasu)"</h3>
+
+                    <p>Teraz dochodzimy do konstrukcji, która początkowo może wydawać się dziwna, ale jest niezwykle przydatna. Słowo "<span class="orange">been</span>" to forma dokonana od czasownika <span class="blue">"be"</span> (być). Możemy je przetłumaczyć jako "odbyte" - tak jak mówimy "odbyć staż", "odbyć służbę", "odbyć podróż". Brzmi to trochę niezwykle w połączeniu z czynnościami, ale właśnie o to chodzi!</p>
+
+                    <p>Angielski łączy tu trzy elementy: <span class="green">mieć</span> + <span class="orange">odbyte</span> + <span class="purple">-ing</span> (robienie). Dosłowne tłumaczenie "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span>" to "mam odbyte pracowanie" - owszem, brzmi to dziwacznie po polsku, ale jest świetnym narzędziem, by zrozumieć mechanikę angielskiego. W praktyce tłumaczymy to jako "pracuję (od jakiegoś czasu)" lub w pewnych kontekstach jako czas przeszły.</p>
+
+                    <p>Ta konstrukcja (tradycyjnie nazywana "Present Perfect Continuous", teraźniejszy dokonany ciągły - czasownik have jest w formie teraźniejszej, tuż po nim mamy formę dokonaną been, a następnie formę z końcówką -ing, czyli ciągłą) pozwala Anglikom mówić o procesach, które trwają już jakiś czas. <span class="orange">"Been"</span> pięknie łączy ich uwielbienie do form z <span class="purple">-ing</span> z możliwością powiedzenia "mam to już odbyte". Nie musisz wcale określać, ile czasu coś trwało! Na pytanie "Co robiłeś?" możesz po prostu odpowiedzieć "I've been working" (Pracowałem). Możesz też podać informację o czasie trwania, jeśli chcesz - i tak bardzo często się to robi w języku angielskim.</p>
+
+                    <ul>
+                        <li>I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> all day = Ja pracuję cały dzień (dosłownie: Ja mam odbyte pracowanie cały dzień)</li>
+                        <li>You <span class="green">have</span> <span class="orange">been</span> <strong>study</strong><span class="purple">ing</span> long = Ty uczysz się długo (dosłownie: Ty masz odbyte uczenie się długo)</li>
+                        <li>She <span class="green">has</span> <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> for two hours = Ona czeka od dwóch godzin (dosłownie: Ona ma odbyte czekanie od dwóch godzin)</li>
+                        <li>They <span class="green">have</span> <span class="orange">been</span> <strong>talk</strong><span class="purple">ing</span> all evening = Oni rozmawiają cały wieczór (dosłownie: Oni mają odbyte rozmawianie cały wieczór)</li>
+                    </ul>
+                    
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Jesteś zmęczony i ktoś pyta, dlaczego. Odpowiadasz: "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> for 10 hours" (Pracuję od 10 godzin) (dosłownie: Ja mam odbyte pracowanie przez 10 godzin)</li>
+                           <li>Jesteś cały spocony, a ktoś pyta, co się stało. Odpowiadasz: "I <span class="green">have</span> <span class="orange">been</span> <strong>runn</strong><span class="purple">ing</span>" (Biegałem) (dosłownie: Ja mam odbyte bieganie)</li>
+                            <li>Ktoś dzwoni do ciebie, a ty jesteś zirytowany długim oczekiwaniem: "I <span class="green">have</span> <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> for an hour!" (Czekam już godzinę!) (dosłownie: Ja mam odbyte czekanie przez godzinę!)</li>
+                        </ul>
+                        <p>We wszystkich tych przypadkach chodzi o proces, który zaczął się jakiś czas temu i ileś go mamy za sobą. Mówiąc w ten sposób, podkreślasz, że już część procesu "odbyłeś" i bardzo często dajesz do zrozumienia, że proces ten nadal trwa, chociaż nie zawsze. Dużo zależy od kontekstu. Ale o tym w dalszej części tego materiału.</p>
+                    </div>
+                    
+                    <p>W pytaniach przestawiamy <span class="green">HAVE/HAS</span> na początek:</p>
+                    <ul>
+                        <li><span class="green">Have</span> you <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span>? = Czy ty pracujesz (od jakiegoś czasu)? (dosłownie: Masz ty odbyte pracowanie?)</li>
+                        <li><span class="green">Has</span> she <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> long? = Czy ona czeka długo? (dosłownie: Ma ona odbyte czekanie długo?)</li>
+                        <li><span class="green">Have</span> they <span class="orange">been</span> <strong>study</strong><span class="purple">ing</span>? = Czy oni uczą się (od jakiegoś czasu)? (dosłownie: Mają oni odbyte uczenie się?)</li>
+                    </ul>
+                    
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="green">have</span> NOT <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> = Ja nie pracuję (od jakiegoś czasu) (dosłownie: Ja mam nie odbyte pracowanie)</li>
+                        <li>She <span class="green">has</span> NOT <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> = Ona nie czeka (dosłownie: Ona ma nie odbyte czekanie)</li>
+                        <li>They <span class="green">have</span> NOT <span class="orange">been</span> <strong>study</strong><span class="purple">ing</span> = Oni nie uczą się (dosłownie: Oni mają nie odbyte uczenie się)</li>
+                    </ul>
+                    
+                    <div class="note mark">
+                        <p>Zauważ jak pięknie i logicznie to wszystko działa! Nie ma tu różnych, niepowiązanych ze sobą "czasów" - są tylko różne sposoby patrzenia na teraźniejszość: jako fakty, stany, procesy, dokonania lub odbyte procesy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zakładka: Przeszłość -->
+        <div id="tab-przeszlosc" class="tab-content">
+            <h2 id="przeszlosc">4. Jak mówimy o tym, co się działo wcześniej</h2>
+            <p>Teraz, gdy już rozumiemy, jak mówić o teraźniejszości, zobaczmy jak te same zasady działają w odniesieniu do przeszłości. Odkryjesz, że to naprawdę ten sam schemat - tylko z czasownikami w formie przeszłej!</p>
+            
+            <!-- Pod-zakładki dla przeszłości -->
+            <div class="subtab-container">
+                <div class="subtab-nav">
+                    <button class="subtab-button active" onclick="openSubtab(event, 'przeszl-fakty')">Proste fakty</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przeszl-byc')">Być wcześniej</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przeszl-robic')">Być robiącym wcześniej</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przeszl-miec')">Mieć wcześniej</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przeszl-zrobione')">Mieć zrobione wcześniej</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przeszl-odbyte')">Mieć odbyte robienie wcześniej</button>
+                </div>
+
+                <!-- Zawartość pod-zakładek dla przeszłości -->
+                <div id="przeszl-fakty" class="subtab-content" style="display: block;">
+                    <h3>Proste fakty z przeszłości: "I <strong>work</strong><span class="red">ed</span> here" = "Pracowałem tutaj"</h3>
+                    <p>Najprostszy sposób mówienia o przeszłości to stwierdzanie faktów, które miały miejsce w przeszłości. Tradycyjnie nazywa się to "Past Simple"(przeszły prosty - czasownik jest w formie przeszłej prostej bez <span class="purple">ing</span>):</p>
+
+                    <ul>
+                        <li>I <strong>work</strong><span class="red">ed</span> there for five years = Ja pracowałem tam przez pięć lat</li>
+                        <li>You <strong>play</strong><span class="red">ed</span> well yesterday = Ty grałeś(-aś) dobrze wczoraj</li>
+                        <li>She <strong>visit</strong><span class="red">ed</span> her parents = Ona odwiedziła swoich rodziców</li>
+                        <li>They <span class="red">bought</span> a new car = Oni kupili nowy samochód (forma nieregularna)</li>
+                        <li>We <span class="red">went</span> to the cinema = My poszliśmy do kina (forma nieregularna)</li>
+                    </ul>
+
+                    <div class="note mark">
+                        <p><strong>Świetna wiadomość!</strong> W czasie przeszłym jest dużo prościej niż w teraźniejszym! Zauważ, że <strong>każdy zwykły czasownik ma tylko JEDNĄ formę</strong> dla wszystkich osób - nie musisz już pamiętać o końcówkach <span class="red">-s</span> czy <span class="red">-es</span> dla trzeciej osoby. "<strong>Work</strong><span class="red">ed</span>" oznacza "pracowałem", "pracowałaś", "pracował", "pracowaliśmy" itd. - wszystko w jednym!</p>
+                        
+                        <p>Jedynym wyjątkiem jest oczywiście czasownik <span class="blue">być</span> (pamiętasz, że to najtrudniejszy czasownik w angielskim?). Ma on dwie formy w czasie przeszłym: <span class="blue">was</span> i <span class="blue">were</span>. Ale to już naprawdę ostatni przypadek, gdzie będziesz musiał(-a) pamiętać o różnych formach dla różnych osób. Od teraz będzie już tylko łatwiej! 😊</p>
+                    </div>
+                    
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Opowiadasz o swoich wakacjach: "I <strong>visit</strong><span class="red">ed</span> Rome last summer" (Odwiedziłem Rzym zeszłego lata)</li>
+                            <li>Opisujesz wczorajszy wieczór: "We <span class="red">went</span> to a restaurant and then <strong>watch</strong><span class="red">ed</span> a movie" (Poszliśmy do restauracji, a potem obejrzeliśmy film)</li>
+                            <li>Relacjonujesz przebieg spotkania: "She <strong>ask</strong><span class="red">ed</span> many questions during the interview" (Zadała wiele pytań podczas rozmowy)</li>
+                        </ul>
+                        <p>We wszystkich tych przypadkach mówisz o faktach, które miały miejsce w przeszłości - bez skupiania się na procesie, tylko na samym zdarzeniu.</p>
+                    </div>
+                    
+                    <h4>Skąd się bierze <strong><span class="underline"><span class="red">DID</span></span></strong> w pytaniach?</h4>
+                    <p>Dobra wiadomość! Jeśli już zrozumiałeś(-aś) <strong><span class="underline">DO</span></strong>/<strong><span class="underline">DO<span class="red">es</span></span></strong> w czasie teraźniejszym, to <strong><span class="underline"><span class="red">DID</span></span></strong> działa dokładnie na tej samej zasadzie - tylko że w przeszłości! 👌</p>
+
+                    <p>Podobnie jak <strong><span class="underline">DO</span></strong>/<strong><span class="underline">DO<span class="red">es</span></span></strong>, <strong><span class="underline"><span class="red">DID</span></span></strong> to jeden z niewielu czasowników, którego nie możemy przetłumaczyć jednym słowem tak, aby powstało sensowne, zrozumiałe zdanie. Podobnie jak w teraźniejszości, można uznać, że znaczy to coś w stylu „czy stało się tak że..." lub „czy faktem było, że..." Dlatego również tutaj pozostaniemy przy standardowych tłumaczeniach. Warto zauważyć, że <strong><span class="underline"><span class="red">DID</span></span></strong> to również normalny czasownik oznaczający "robić" czy "wykonywać czynność" w czasie przeszłym.</p>
+
+                    <p><strong><span class="underline"><span class="red">DID</span></span></strong> pochodzi ze zdań akcentujących, dokładnie tak jak <strong><span class="underline">DO</span></strong>/<strong><span class="underline">DO<span class="red">es</span></span></strong>:</p>
+                    <ul>
+                        <li>"I <strong><span class="underline"><span class="red">DID</span></span></strong> see it!" = "Ja <strong>NAPRAWDĘ</strong> to widziałem!" (a nie "Ja ROBIŁEM widzieć to" - co nie miałoby sensu)</li>
+                    </ul>
+
+                    <p>W pytaniach używamy <strong><span class="underline"><span class="red">DID</span></span></strong>:</p>
+                    <ul>
+                        <li><strong><span class="underline"><span class="red">DID</span></span></strong> you <strong>work</strong> there? = Czy ty pracowałeś(-aś) tam?</li>
+                        <li><strong><span class="underline"><span class="red">DID</span></span></strong> she <strong>visit</strong> her parents? = Czy ona odwiedziła swoich rodziców?</li>
+                        <li><strong><span class="underline"><span class="red">DID</span></span></strong> they <strong>buy</strong> a car? = Czy oni kupili samochód?</li>
+                    </ul>
+
+                    <p>Zauważ kolejną dobrą wiadomość: gdy używamy <strong><span class="underline"><span class="red">DID</span></span></strong>, czasownik główny wraca do formy podstawowej (bez końcówki <span class="red">-ed</span>): "<strong><span class="underline"><span class="red">DID</span></span></strong> you <strong>work</strong>" (nie "worked"). To znów pokazuje logiczną prostotę angielskiego - skoro już w zdaniu jest informacja, że mówimy o przeszłości (w formie <strong><span class="underline"><span class="red">DID</span></span></strong>), to nie potrzebujemy już końcówki <span class="red">-ed</span> przy głównym czasowniku!</p>
+                        
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <strong><span class="underline"><span class="red">DID</span></span></strong> NOT (didn't) <strong>work</strong> there = Ja nie pracowałem tam</li>
+                        <li>She <strong><span class="underline"><span class="red">DID</span></span></strong> NOT (didn't) <strong>visit</strong> her parents = Ona nie odwiedziła swoich rodziców</li>
+                        <li>They <strong><span class="underline"><span class="red">DID</span></span></strong> NOT (didn't) <strong>go</strong> to the party = Oni nie poszli na imprezę</li>
+                    </ul>
+                </div>
+
+                <div id="przeszl-byc" class="subtab-content">
+                    <h3>Być wcześniej: "I <span class="blue">was</span> happy" = "Byłem szczęśliwy"</h3>
+                    <p>Przeszła forma czasownika <span class="blue">być</span> (nadal jest to Past Simple czyli przeszły prosty):</p>
+                    <ul>
+                        <li>I <span class="blue">was</span> happy = Ja byłem szczęśliwy</li>
+                        <li>You <span class="blue">were</span> late = Ty byłeś(-aś) spóźniony(-a) / Wy byliście spóźnieni</li>
+                        <li>She <span class="blue">was</span> at home = Ona była w domu</li>
+                        <li>We <span class="blue">were</span> tired = My byliśmy zmęczeni</li>
+                        <li>They <span class="blue">were</span> at school = Oni byli w szkole</li>
+                    </ul>
+                    
+                    <p>W pytaniach przestawiamy <span class="blue">was/were</span> na początek:</p>
+                    <ul>
+                        <li><span class="blue">Was</span> I late? = Czy ja byłem spóźniony? (dosłownie: Byłem ja późno?)</li>
+                        <li><span class="blue">Were</span> you at the party? = Czy ty byłeś(-aś) na imprezie? (dosłownie: Byłeś ty na imprezie?)</li>
+                        <li><span class="blue">Were</span> they happy? = Czy oni byli szczęśliwi? (dosłownie: Byli oni szczęśliwi?)</li>
+                    </ul>
+                    
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="blue">was</span> NOT (wasn't) happy = Ja nie byłem szczęśliwy (dosłownie: Ja byłem nie szczęśliwy)</li>
+                        <li>She <span class="blue">was</span> NOT (wasn't) at home = Ona nie była w domu (dosłownie: Ona była nie w domu)</li>
+                        <li>They <span class="blue">were</span> NOT (weren't) ready = Oni nie byli gotowi (dosłownie: Oni byli nie gotowi)</li>
+                    </ul>
+                </div>
+
+                <div id="przeszl-robic" class="subtab-content">
+                    <h3>Być robiącym wcześniej: "I <span class="blue">was</span> <strong>work</strong><span class="purple">ing</span>" = "Pracowałem"</h3>
+                    <p>Świetna wiadomość! Tu wszystko działa dokładnie tak samo jak "być robiącym" w teraźniejszości, którą już poznałeś(-aś). Wystarczy, że zamiast <span class="blue">am/is/are</span> użyjesz przeszłej formy <span class="blue">was/were</span>. Cała reszta pozostaje bez zmian! 😊</p>
+
+                    <p>Ta konstrukcja (tradycyjnie "Past Continuous" czyli przeszły ciągły - czasownik <span class="blue">"być"</span> jest w formie przyszłej a po nim mamy <span class="purple">ing</span> czyli formę ciągłą) pokazuje proces dokładnie tak samo jak w teraźniejszości - z tą różnicą, że działo się to w przeszłości. To jak odtwarzanie filmu z przeszłości, a nie robienie zdjęcia!</p>
+                    <ul>
+                        <li>I <span class="blue">was</span> <strong>work</strong><span class="purple">ing</span> = "Pracowałem" (dosłownie: "Ja byłem pracujący")</li>
+                    <p>Świetna wiadomość! Tu wszystko działa dokładnie tak samo jak "być robiącym" w teraźniejszości, którą już poznałeś(-aś). Wystarczy, że zamiast <span class="blue">am/is/are</span> użyjesz przeszłej formy <span class="blue">was/were</span>. Cała reszta pozostaje bez zmian! 😊</p>
+
+                    <p>Ta konstrukcja (tradycyjnie "Past Continuous" czyli przeszły ciągły - czasownik <span class="blue">"być"</span> jest w formie przyszłej a po nim mamy <span class="purple">ing</span> czyli formę ciągłą) pokazuje proces dokładnie tak samo jak w teraźniejszości - z tą różnicą, że działo się to w przeszłości. To jak odtwarzanie filmu z przeszłości, a nie robienie zdjęcia!</p>
+                    <ul>
+                        <li>I <span class="blue">was</span> <strong>work</strong><span class="purple">ing</span> when you called = Ja pracowałem, kiedy zadzwoniłeś (dosłownie: Ja byłem pracujący, kiedy zadzwoniłeś)</li>
+                        <li>You <span class="blue">were</span> <strong>sleep</strong><span class="purple">ing</span> = Ty spałeś(-aś) (dosłownie: Ty byłeś(-aś) śpiący(-a))</li>
+                        <li>She <span class="blue">was</span> <strong>cook</strong><span class="purple">ing</span> dinner = Ona gotowała obiad (dosłownie: Ona była gotująca obiad)</li>
+                        <li>They <span class="blue">were</span> <strong>play</strong><span class="purple">ing</span> football = Oni grali w piłkę nożną (dosłownie: Oni byli grający w piłkę nożną)</li>
+                    </ul>
+
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Opowiadasz, co robiłeś, gdy ktoś do ciebie zadzwonił: "I <span class="blue">was</span> <strong>cook</strong><span class="purple">ing</span> dinner when the phone rang" (Gotowałem obiad, kiedy zadzwonił telefon) (dosłownie: Byłem gotujący obiad, kiedy zadzwonił telefon)</li>
+                            <li>Opisujesz, co działo się wczoraj o 8 wieczorem: "At 8 pm yesterday, I <span class="blue">was</span> <strong>watch</strong><span class="purple">ing</span> TV" (O 8 wieczorem wczoraj oglądałem telewizję) (dosłownie: O 8 wieczorem wczoraj byłem oglądający telewizję)</li>
+                            <li>Wyjaśniasz, dlaczego nie odebrałeś telefonu: "I <span class="blue">was</span> <strong>tak</strong><span class="purple">ing</span> a shower" (Brałem prysznic) (dosłownie: Byłem biorący prysznic)</li>
+                        </ul>
+                        <p>We wszystkich tych przypadkach opisujesz proces, który trwał w przeszłości - jakbyś odtwarzał film z tej sceny.</p>
+                    </div>
+
+                    <p>W pytaniach przestawiamy <span class="blue">was/were</span> na początek:</p>
+                    <ul>
+                        <li><span class="blue">Was</span> I <strong>talk</strong><span class="purple">ing</span> too loud? = Czy ja mówiłem za głośno? (dosłownie: Byłem ja mówiący za głośno?)</li>
+                        <li><span class="blue">Were</span> you <strong>work</strong><span class="purple">ing</span> yesterday? = Czy ty pracowałeś(-aś) wczoraj? (dosłownie: Byłeś(-aś) ty pracujący(-a) wczoraj?)</li>
+                        <li><span class="blue">Was</span> she <strong>read</strong><span class="purple">ing</span> when you arrived? = Czy ona czytała, kiedy przybyłeś? (dosłownie: Była ona czytająca, kiedy przybyłeś?)</li>
+                    </ul>
+
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="blue">was</span> NOT (wasn't) <strong>work</strong><span class="purple">ing</span> = Ja nie pracowałem (dosłownie: Ja byłem nie pracujący)</li>
+                        <li>She <span class="blue">was</span> NOT (wasn't) <strong>cook</strong><span class="purple">ing</span> = Ona nie gotowała (dosłownie: Ona była nie gotująca)</li>
+                        <li>They <span class="blue">were</span> NOT (weren't) <strong>play</strong><span class="purple">ing</span> = Oni nie grali (dosłownie: Oni byli nie grający)</li>
+                    </ul>
+                </div>
+
+                <div id="przeszl-miec" class="subtab-content">
+                    <h3>Mieć wcześniej: "I <span class="green">had</span> a dog" = "Miałem psa"</h3>
+                    <p>Kolejna dobra wiadomość! Czasownik <span class="green">"mieć"</span> w przeszłości jest jeszcze prostszy niż w teraźniejszości - mamy tylko jedną formę <span class="green">had</span> dla wszystkich osób! 👍</p>
+
+                    <p>Tutaj ponownie mamy do czynienia z <span class="green">"mieć"</span> jako zwykłym czasownikiem, więc traktujemy go dokładnie tak samo jak każdy inny czasownik w czasie przeszłym (jest to ponownie czas "Past simple" czyli przeszły prosty).</p>
+                    <ul>
+                        <li>I <span class="green">had</span> a car = Ja miałem samochód</li>
+                        <li>She <span class="green">had</span> a headache = Ona miała ból głowy</li>
+                        <li>We <span class="green">had</span> time = My mieliśmy czas</li>
+                        <li>They <span class="green">had</span> three children = Oni mieli troje dzieci</li>
+                    </ul>
+
+                    <p>W pytaniach używamy <strong><span class="underline"><span class="red">DID</span></span></strong> - dokładnie tak jak z innymi czasownikami:</p>
+                    <ul>
+                        <li><strong><span class="underline"><span class="red">DID</span></span></strong> you <strong>have</strong> a car? = Czy ty miałeś(-aś) samochód?</li>
+                        <li><strong><span class="underline"><span class="red">DID</span></span></strong> she <strong>have</strong> time? = Czy ona miała czas?</li>
+                        <li><strong><span class="underline"><span class="red">DID</span></span></strong> they <strong>have</strong> money? = Czy oni mieli pieniądze?</li>
+                    </ul>
+
+                    <p>W przeczeniach:</p>
+                    <ul>
+                        <li>I <strong><span class="underline"><span class="red">DID</span></span></strong> NOT (didn't) <strong>have</strong> a car = Ja nie miałem samochodu</li>
+                        <li>She <strong><span class="underline"><span class="red">DID</span></span></strong> NOT (didn't) <strong>have</strong> time = Ona nie miała czasu</li>
+                        <li>They <strong><span class="underline"><span class="red">DID</span></span></strong> NOT (didn't) <strong>have</strong> books = Oni nie mieli książek</li>
+                    </ul>
+                </div>
+
+                <div id="przeszl-zrobione" class="subtab-content">
+                    <h3>Mieć zrobione wcześniej: "I <span class="green">had</span> <strong>finish</strong><span class="orange">ed</span>" = "Skończyłem (wcześniej)"</h3>
+                    <p>A teraz poznasz konstrukcję, która umożliwia "podróż w czasie" w przeszłości! 🕰️ To ta sama logika co w Present Perfect ("mam zrobione"), tylko przesunięta do przeszłości - "miałem zrobione".</p>
+
+                    <p>Ta struktura (tradycyjnie "Past Perfect Simple" czyli przeszły dokonany prosty - czasownik <span class="green">have</span> jest w formie przeszłej a po nim jest forma dokonana prosta bez <span class="purple">ing</span>) pokazuje, że coś było już zrobione, skończone przed jakimś innym momentem w przeszłości. To tak, jakbyś oglądał się za siebie będąc w przeszłości - patrzysz na to, co już miałeś zrobione, zanim coś innego się wydarzyło.</p>
+
+                    <div class="note mark">
+                        <p><strong>Zauważ:</strong> W zdaniach z Past Perfect często występują dwa momenty w przeszłości - jeden wcześniejszy (używamy dla niego Past Perfect) i jeden późniejszy (używamy dla niego zwykłego Past Simple). Właśnie dlatego zobaczysz w przykładach zarówno formy typu <span class="green">had</span> <strong>finish</strong><span class="orange">ed</span>, jak i czasowniki w zwykłym czasie przeszłym z końcówką <span class="red">-ed</span> lub formy nieregularne <span class="red">went</span>, <span class="red">came</span>, itp.</p>
+                    </div>
+
+                    <ul>
+                        <li>I <span class="green">had</span> <strong>finish</strong><span class="orange">ed</span> my work before you <strong>arriv</strong><span class="red">ed</span> = Ja skończyłem swoją pracę zanim przybyłeś (dosłownie: Ja miałem skończone swoją pracę zanim przybyłeś)</li>
+                        <li>You <span class="green">had</span> never <span class="orange">seen</span> him before = Ty nigdy wcześniej go nie widziałeś(-aś) (dosłownie: Ty miałeś(-aś) nigdy widziane jego wcześniej)</li>
+                        <li>She <span class="green">had</span> <strong>complete</strong><span class="orange">d</span> the task when I <strong>call</strong><span class="red">ed</span> = Ona ukończyła zadanie, kiedy zadzwoniłem (dosłownie: Ona miała ukończone zadanie, kiedy zadzwoniłem)</li>
+                        <li>They <span class="green">had</span> <strong>prepare</strong><span class="orange">d</span> everything by the time we <strong>arriv</strong><span class="red">ed</span> = Oni przygotowali wszystko do czasu, gdy przybyliśmy (dosłownie: Oni mieli przygotowane wszystko do czasu, gdy przybyliśmy)</li>
+                    </ul>
+
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Opowiadasz, że spóźniłeś się na film w kinie: "When I <strong>arriv</strong><span class="red">ed</span> at the cinema, the movie <span class="green">had</span> already <strong>start</strong><span class="orange">ed</span>" (Kiedy dotarłem do kina, film już się zaczął) (dosłownie: Kiedy dotarłem do kina, film miał już rozpoczęte)</li>
+                            <li>Wyjaśniasz, dlaczego nie zjadłeś obiadu: "I <span class="green">had</span> <span class="orange">eaten</span> before I <span class="red">came</span>" (Zjadłem, zanim przyszedłem) (dosłownie: Ja miałem zjedzone, zanim przyszedłem)</li>
+                           <li>Tłumaczysz, dlaczego ktoś cię nie poznał na wczorajszym spotkaniu: "He <span class="red">didn't</span> <strong>recognize</strong> me because I <span class="green">had</span> <strong>change</strong><span class="orange">d</span> a lot since our last meeting" (Nie poznał mnie, ponieważ zmieniłem się bardzo od naszego ostatniego spotkania) (dosłownie: Nie poznał mnie, ponieważ ja miałem zmienione się bardzo od naszego ostatniego spotkania)</li>
+                        </ul>
+                        <p>W każdym z tych przypadków mówisz o czymś, co wydarzyło się przed innym momentem w przeszłości. To jak uporządkowanie zdarzeń na osi czasu - najpierw stało się X (Past Perfect), potem stało się Y (Past Simple).</p>
+                    </div>
+
+                    <p>W pytaniach przestawiamy <span class="green">HAD</span> na początek:</p>
+                    <ul>
+                        <li><span class="green">Had</span> you <strong>finish</strong><span class="orange">ed</span> before dinner? = Czy ty skończyłeś(-aś) przed obiadem? (dosłownie: Miałeś(-aś) ty skończone przed obiadem?)</li>
+                        <li><span class="green">Had</span> she <span class="orange">seen</span> that movie before it <span class="red">won</span> the Oscar? = Czy ona widziała ten film zanim zdobył Oscara? (dosłownie: Miała ona widziane ten film zanim zdobył Oscara?)</li>
+                        <li><span class="green">Had</span> they <strong>arrive</strong><span class="orange">d</span> when you <strong>call</strong><span class="red">ed</span>? = Czy oni przybyli, kiedy zadzwoniłeś? (dosłownie: Mieli oni przybyte, kiedy zadzwoniłeś?)</li>
+                    </ul>
+
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="green">had</span> NOT (hadn't) <strong>finish</strong><span class="orange">ed</span> my report when the boss <strong>call</strong><span class="red">ed</span> = Ja nie skończyłem swojego raportu, kiedy szef zadzwonił (dosłownie: Ja miałem nie skończone swój raport, kiedy szef zadzwonił)</li>
+                        <li>She <span class="green">had</span> NOT (hadn't) <span class="orange">seen</span> the movie before it <span class="red">won</span> the Oscar = Ona nie widziała filmu, zanim zdobył Oscara (dosłownie: Ona miała nie widziane film, zanim zdobył Oscara)</li>
+                        <li>They <span class="green">had</span> NOT (hadn't) <strong>arrive</strong><span class="orange">d</span> by the time we <span class="red">left</span> = Oni nie przybyli do czasu, gdy wyszliśmy (dosłownie: Oni mieli nie przybyte do czasu, gdy wyszliśmy)</li>
+                    </ul>
+                </div>
+
+                <div id="przeszl-odbyte" class="subtab-content">
+                    <h3>Mieć odbyte robienie wcześniej: "I <span class="green">had</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span>" = "Pracowałem (już jakiś czas)"</h3>
+                    <p>Ta konstrukcja jest jak młodszy brat konstrukcji "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span>", tylko że w przeszłości! 🔙 Podobnie jak w Present Perfect Continuous, "odbyte" (<span class="orange">been</span>) pokazuje, że proces trwał przez jakiś czas.</p>
+
+                    <p>Ta struktura (tradycyjnie "Past Perfect Continuous" czyli przeszły dokonany ciągły - czasownik <span class="green">"have"</span> jest w formie przeszłej, tuż po nim mamy formę dokonaną czyli <span class="orange">been</span> a potem formę z <span class="purple">ing</span>) pokazuje proces, który trwał przez jakiś czas do konkretnego momentu w przeszłości. Używamy jej, gdy chcemy powiedzieć, jakiś proces już mieliśmy za sobą, często ile mieliśmy tego procesu odbytego do określonego momentu w przeszłości.</p>
+                    <ul>
+                        <li>I <span class="green">had</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> for 10 hours when you <strong>call</strong><span class="red">ed</span> = Ja pracowałem przez 10 godzin, kiedy zadzwoniłeś (dosłownie: Ja miałem odbyte pracowanie przez 10 godzin, kiedy zadzwoniłeś)</li>
+                        <li>You <span class="green">had</span> <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> for an hour when I <strong>arriv</strong><span class="red">ed</span> = Ty czekałeś(-aś) przez godzinę, kiedy przybyłem (dosłownie: Ty miałeś(-aś) odbyte czekanie przez godzinę, kiedy przybyłem)</li>
+                        <li>She <span class="green">had</span> <span class="orange">been</span> <strong>study</strong><span class="purple">ing</span> all night before the exam <strong>start</strong><span class="red">ed</span> = Ona uczyła się całą noc przed rozpoczęciem egzaminu (dosłownie: Ona miała odbyte uczenie się całą noc przed rozpoczęciem egzaminu)</li>
+                        <li>They <span class="green">had</span> <span class="orange">been</span> <strong>liv</strong><span class="purple">ing</span> there for years before they <strong>decid</strong><span class="red">ed</span> to move = Oni mieszkali tam latami zanim zdecydowali się przeprowadzić (dosłownie: Oni mieli odbyte mieszkanie tam latami zanim zdecydowali się przeprowadzić)</li>
+                    </ul>
+
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Tłumaczysz, dlaczego byłeś zmęczony na spotkaniu: "I <span class="green">had</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> for 12 hours before the meeting <strong>start</strong><span class="red">ed</span>" (Pracowałem przez 12 godzin, zanim zaczęło się spotkanie) (dosłownie: Miałem odbyte pracowanie przez 12 godzin, zanim zaczęło się spotkanie)</li>
+                            <li>Tłumaczysz, dlaczego miałeś takie czerwone oczy podczas ważnego spotkania: "I <span class="green">had</span> <span class="orange">been</span> <strong>driv</strong><span class="purple">ing</span> all night to get to the conference on time" (Prowadziłem samochód całą noc, żeby dostać się na konferencję) (dosłownie: Miałem odbyte prowadzenie całą noc, żeby dostać się na konferencję)</li>
+                            <li>Opowiadasz, dlaczego byłeś zły na przyjaciela: "I <span class="green">had</span> <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> for two hours when he finally <span class="red">showed</span> up" (Czekałem dwie godziny, kiedy w końcu się pojawił) (dosłownie: Miałem odbyte czekanie przez dwie godziny, kiedy w końcu się pojawił)</li>
+                        </ul>
+                        <p>Za każdym razem opisujesz proces, który trwał do pewnego momentu w przeszłości, i często wyjaśniasz w ten sposób przyczynę czegoś. Możesz też powiedzieć, ile już "odbyłeś" z danego procesu w konkretnym momencie przeszłości.</p>
+                    </div>
+
+                    <p>W pytaniach przestawiamy <span class="green">HAD</span> na początek:</p>
+                    <ul>
+                        <li><span class="green">Had</span> you <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> before the meeting <strong>start</strong><span class="red">ed</span>? = Czy ty pracowałeś(-aś) zanim spotkanie się zaczęło? (dosłownie: Miałeś(-aś) ty odbyte pracowanie zanim spotkanie się zaczęło?)</li>
+                        <li><span class="green">Had</span> she <span class="orange">been</span> <strong>cry</strong><span class="purple">ing</span> when you <span class="red">saw</span> her? = Czy ona płakała, kiedy ją zobaczyłeś? (dosłownie: Miała ona odbyte płakanie, kiedy ją zobaczyłeś?)</li>
+                        <li><span class="green">Had</span> they <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> long when you <strong>arriv</strong><span class="red">ed</span>? = Czy oni czekali długo, kiedy przybyłeś? (dosłownie: Mieli oni odbyte czekanie długo, kiedy przybyłeś?)</li>
+                    </ul>
+
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="green">had</span> NOT (hadn't) <span class="orange">been</span> <strong>follow</strong><span class="purple">ing</span> the news for months before the election <strong>happen</strong><span class="red">ed</span>, so I <span class="blue">was</span> surprised by the result = Nie śledziłem wiadomości przez miesiące przed wyborami, więc byłem zaskoczony wynikiem (dosłownie: Miałem nie odbyte śledzenie wiadomości przez miesiące przed wyborami, więc byłem zaskoczony wynikiem)</li>
+                        <li>She <span class="green">had</span> NOT (hadn't) <span class="orange">been</span> <strong>study</strong><span class="purple">ing</span> before the exam <strong>start</strong><span class="red">ed</span> = Ona nie uczyła się przed egzaminem (dosłownie: Ona miała nie odbyte uczenie się przed egzaminem)</li>
+                        <li>They <span class="green">had</span> NOT (hadn't) <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> long when the train <strong>arriv</strong><span class="red">ed</span> = Oni nie czekali długo, kiedy pociąg przyjechał (dosłownie: Oni mieli nie odbyte czekanie długo, kiedy pociąg przyjechał)</li>
+                    </ul>
+
+                    <div class="note mark">
+                        <p>Widzisz, jak logicznie to wszystko działa? Wszystkie te "czasy przeszłe" to po prostu te same wzorce, które poznaliśmy mówiąc o teraźniejszości, tylko z czasownikami w formie przeszłej!</p>
+                        
+                        <p>Zamiast uczyć się 12 różnych czasów, wystarczy zrozumieć, że:</p>
+                        <ol>
+                            <li>Każdy czasownik ma tylko dwie prawdziwe formy: teraźniejszą i przeszłą</li>
+                            <li>Do tych form dodajemy inne elementy, aby pokazać różne perspektywy</li>
+                            <li>To, co tradycyjnie nazywamy "czasami", to w rzeczywistości różne sposoby patrzenia na fakty, procesy i dokonania</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zakładka: Przyszłość -->
+        <div id="tab-przyszlosc" class="tab-content">
+            <h2 id="przyszlosc">5. Wyrażanie przyszłości</h2>
+            <p>Dobra wiadomość! W angielskim nie ma czasu przyszłego! 🎉 Zamiast tego mamy kilka sprytnych sposobów, aby mówić o przyszłości.</p>
+
+            <p>Do tej pory poznaliśmy już dwa sposoby mówienia o przyszłości, używając czasów teraźniejszych:</p>
+            <ul>
+                <li>Present Simple: "The train <strong>leave</strong><span class="red">s</span> at 8 tomorrow" (Pociąg odjeżdża o 8 jutro)</li>
+                <li>Present Continuous: "I <span class="blue">am</span> <strong>meet</strong><span class="purple">ing</span> John on Friday" (Spotykam się z Johnem w piątek) (dosłownie: Jestem spotykający się z Johnem w piątek)</li>
+            </ul>
+            
+            <!-- Pod-zakładki dla przyszłości -->
+            <div class="subtab-container">
+                <div class="subtab-nav">
+                    <button class="subtab-button active" onclick="openSubtab(event, 'przyszl-going-to')">Going to</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przyszl-will')">WILL</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przyszl-robic')">Być robiącym w przyszłości</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przyszl-zrobione')">Mieć zrobione w przyszłości</button>
+                    <button class="subtab-button" onclick="openSubtab(event, 'przyszl-odbyte')">Mieć odbyte robienie w przyszłości</button>
+                </div>
+
+                <!-- Pod-zakładki dla przyszłości -->
+                <div id="przyszl-going-to" class="subtab-content" style="display: block;">
+                    <h3>Going to - jeszcze jeden sposób mówienia o przyszłości</h3>
+                    <p>Jest jeszcze jeden bardzo popularny sposób mówienia w teraźniejszości o przyszłości: konstrukcja "going to". W szkole często uczą, że to "zamierzam coś zrobić", ale prawda jest ciekawsza! 😊</p>
+
+                    <p>Słowo "go" w rzeczywistości oznacza <strong>"zmierzać"</strong> lub <strong>"podążać"</strong>. Gdy mówimy "I am going to play football", dosłowne tłumaczenie to "Ja <strong>zmierzam,</strong> aby grać w piłkę" - nie "zamierzam grać w piłkę".</p>
+
+                    <p>Najbliższym polskim odpowiednikiem jest wyrażenie "wybieram się coś zrobić", co oznacza "czynię przygotowania, aby coś się wydarzyło w przyszłości". Używamy tej konstrukcji, gdy już podjęliśmy decyzję (nasza wola została postanowiona) i ogłaszamy światu, że wybieramy się coś zrobić.</p>
+                    <div class="example">
+                        <ul>
+                            <li>I <span class="blue">am</span> <strong>go</strong><span class="purple">ing</span> to buy a new car = Powszechnie tłumaczone jako "Kupię nowy samochód"/"Zamierzam kupić nowy samochód", ale tak naprawdę mówimy "Wybieram się kupić nowy samochód" (dosłownie: Ja jestem zmierzający aby kupić nowy samochód)</li>
+                            <li>She <span class="blue">is</span> <strong>go</strong><span class="purple">ing</span> to study medicine = Powszechnie tłumaczone jako "Ona będzie studiować medycynę"/"Ona zamierza studiować medycynę", ale tak naprawdę mówimy "Ona wybiera się studiować medycynę" (dosłownie: Ona jest zmierzająca aby studiować medycynę)</li>
+                            <li>They <span class="blue">are</span> <strong>go</strong><span class="purple">ing</span> to move next month = Powszechnie tłumaczone jako "Oni przeprowadzą się w przyszłym miesiącu"/"Oni zamierzają przeprowadzić się w przyszłym miesiącu", ale tak naprawdę mówimy "Oni wybierają się przeprowadzić w przyszłym miesiącu" (dosłownie: Oni są zmierzający aby przeprowadzić się w przyszłym miesiącu)</li>
+                        </ul>
+                    </div>
+
+                    <p>Dlaczego więc tak często tłumaczy się to jako "zamierzam" lub po prostu jako czas przyszły? Ponieważ w większości przypadków nie zaburza to zrozumienia - wszystkie te interpretacje prowadzą do podobnego wniosku: coś stanie się w przyszłości na skutek naszej decyzji. Jest to przykład pragmatycznego tłumaczenia, które choć nie oddaje dosłownego znaczenia "going to", dobrze funkcjonuje w codziennym użyciu.</p>
+
+                    <div class="situation mark">
+                       <h4>Kiedy używamy "going to"?</h4>
+                       <p>Konstrukcji "going to" używamy najczęściej, gdy:</p>
+                       <ul>
+                           <li>Mamy już zaplanowane lub zdecydowane działanie: "I <span class="blue">am</span> <strong>go</strong><span class="purple">ing</span> to visit my grandmother this weekend" = Powszechnie tłumaczone jako "Odwiedzę babcię w ten weekend", ale tak naprawdę mówimy "Wybieram się odwiedzić babcię w ten weekend" (dosłownie: "Ja jestem zmierzający aby odwiedzić moją babcię w ten weekend")</li>
+                           <li>Widzimy wyraźne oznaki przyszłego wydarzenia: "Look at those clouds, it <span class="blue">is</span> <strong>go</strong><span class="purple">ing</span> to rain" = Powszechnie tłumaczone jako "Spójrz na te chmury, będzie padać", ale tak naprawdę mówimy "Spójrz na te chmury, to wybiera się padać" (dosłownie: "Spójrz na te chmury, to jest zmierzające aby padać")</li>
+                           <li>Mamy silne przekonanie, że coś się wydarzy: "She <span class="blue">is</span> <strong>go</strong><span class="purple">ing</span> to win the competition" = Powszechnie tłumaczone jako "Ona wygra zawody", ale tak naprawdę mówimy "Ona wybiera się wygrać zawody" (dosłownie: "Ona jest zmierzająca aby wygrać zawody")</li>
+                       </ul>
+                    </div>
+
+                    <p>Ale jest jeszcze jeden, najczęstszy sposób mówienia o przyszłości, używając słowa <span class="brown">will</span>. 👇</p>
+                </div>
+
+                <div id="przyszl-will" class="subtab-content">
+                    <h3>WILL - między wolą a przyszłością</h3>
+                    <p>Oto ciekawostka: w angielskim tak naprawdę nie ma gramatycznego czasu przyszłego! 🤯 Zamiast tego, najczęściej używamy słowa <span class="brown">will</span>, które ma fascynującą historię.</p>
+
+                    <p>Słowo <span class="brown">will</span> pochodzi od staroangielskiego czasownika <strong>willan</strong>, który oznaczał "chcieć" lub "pragnąć" - podobnie jak stare polskie "woleć". (Dziś używamy "woleć" głównie mówiąc "wolę herbatę niż kawę", ale to wciąż wyraża naszą wolę).</p>
+
+                    <p>Początkowo <span class="brown">will</span> było używane tylko do wyrażania woli ludzi - nikt nie powiedziałby "It <span class="brown">will</span> rain" (Ono woli padać) o pogodzie! Dopiero później, około XIV wieku, <span class="brown">will</span> zaczęto używać szerzej jako sposób mówienia o przyszłości.</p>
+
+                    <div class="note mark">
+                        <p>Gdy ktoś mówi po angielsku "I <span class="brown">will</span> help you", historycznie wyrażał swoją wolę - "Wolę ci pomóc" - co logicznie prowadzi do przyszłego działania "Pomogę ci". Ta sama forma używana jest dziś niezależnie czy mówimy o ludziach, rzeczach czy pogodzie!</p>
+                    </div>
+
+                    <h3>Podstawowe wyrażanie przyszłości z WILL: 🚀</h3>
+                    <p>Ta najprostsza konstrukcja (tradycyjnie nazywana "Future Simple" czyli przyszły prosty - po will mamy prosty, zawsze podstawowy czasownik bez jakichkolwiek końcówek) używa słowa <span class="brown">will</span> dodanego do podstawowej formy czasownika:</p>
+                    <ul>
+                        <li>I <span class="brown">will</span> <strong>help</strong> you = Ja pomogę ci (dosłownie: Ja wolę pomóc ci)</li>
+                        <li>You <span class="brown">will</span> <strong>understand</strong> it soon = Ty zrozumiesz to wkrótce (dosłownie: Ty wolisz zrozumieć to wkrótce)</li>
+                        <li>She <span class="brown">will</span> <strong>arrive</strong> tomorrow = Ona przybędzie jutro (dosłownie: Ona woli przybyć jutro)</li>
+                        <li>We <span class="brown">will</span> <strong>finish</strong> the project = My skończymy projekt (dosłownie: My wolimy skończyć projekt)</li>
+                        <li>They <span class="brown">will</span> <strong>win</strong> the match = Oni wygrają mecz (dosłownie: Oni wolą wygrać mecz)</li>
+                    </ul>
+
+                    <p>W pytaniach przestawiamy <span class="brown">will</span> na początek:</p>
+                    <ul>
+                        <li><span class="brown">Will</span> you <strong>help</strong> me? = Czy ty pomożesz mi? (dosłownie: Wolisz ty pomóc mi?)</li>
+                        <li><span class="brown">Will</span> she <strong>be</strong> there? = Czy ona tam będzie? (dosłownie: Woli ona być tam?)</li>
+                        <li><span class="brown">Will</span> they <strong>come</strong> to the party? = Czy oni przyjdą na imprezę? (dosłownie: Wolą oni przyjść na imprezę?)</li>
+                    </ul>
+
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="brown">will</span> NOT (won't) <strong>go</strong> = Ja nie pójdę (dosłownie: Ja wolę nie pójść)</li>
+                        <li>She <span class="brown">will</span> NOT (won't) <strong>agree</strong> = Ona nie zgodzi się (dosłownie: Ona woli nie zgodzić się)</li>
+                        <li>They <span class="brown">will</span> NOT (won't) <strong>be</strong> late = Oni nie spóźnią się (dosłownie: Oni wolą nie spóźnić się)</li>
+                    </ul>
+
+                    <div class="situation mark">
+                        <h4>Kiedy używamy WILL?</h4>
+                        <p>Oto typowe sytuacje, w których używamy <span class="brown">will</span>:</p>
+                        <ul>
+                            <li>Oznajmiasz swoją decyzję, zgodnie z oryginalnym znaczeniem <span class="brown">will</span> jako wyrażenia woli: "I <span class="brown">will</span> <strong>take</strong> this one" (Wezmę ten) (dosłownie: Ja wolę wziąć ten)</li>
+                            <li>Obiecujesz pomoc: "I <span class="brown">will</span> <strong>help</strong> you with your homework" (Pomogę ci z pracą domową) (dosłownie: Ja wolę pomóc ci z pracą domową)</li>
+                            <li>Przewidujesz, że coś się stanie: "I think it <span class="brown">will</span> <strong>fall</strong>" (Myślę, że to spadnie) (dosłownie: Ja myślę, że to woli spaść)</li>
+                        </ul>
+                        <p>We wszystkich tych przypadkach mówisz o czymś, co dopiero nastąpi. Zauważ, jak prosto to wygląda - nic nie zmienia formy, niezależnie od osoby czy liczby!</p>
+                    </div>
+
+                    <h3>Inne słowa zachowujące się jak WILL - czasowniki modalne 🧩</h3>
+                    <p>Oprócz <span class="brown">will</span>, istnieją również inne słowa działające dokładnie według tego samego wzorca. Te słowa, które w gramatyce angielskiej nazywane są <strong>czasownikami modalnymi</strong>, mają wspaniałą cechę - nie zmieniają formy. Wystarczy znać ich znaczenie, by wiedzieć, jak ich używać:</p>
+                    <ul>
+                        <li><span class="brown">can</span> = móc, potrafić, umieć</li>
+                        <li><span class="brown">should</span> = powinno się</li>
+                    </ul>
+                    <p>Istnieje jeszcze kilka innych takich słów, ale ponieważ nie uczymy tu słownictwa, skupimy się tylko na zrozumieniu, jak one działają:</p>
+                    <ul>
+                        <li>I <span class="brown">can</span> <strong>swim</strong> = Ja potrafię pływać (tak samo jak: I <span class="brown">will</span> <strong>swim</strong>)</li>
+                        <li>She <span class="brown">should</span> <strong>call</strong> = Ona powinna zadzwonić (tak samo jak: She <span class="brown">will</span> <strong>call</strong>)</li>
+                    </ul>
+                    <p>Dokładnie jak <span class="brown">will</span>, czasowniki modalne:</p>
+                    <ul>
+                        <li>Nie zmieniają formy dla różnych osób (NIE MA: <span class="brown">cans</span>, <span class="brown">shoulds</span> - tak samo jak nie ma <span class="brown">wills</span>)</li>
+                        <li>W pytaniach są przestawiane na początek: <span class="brown">Can</span> you swim? <span class="brown">Should</span> we go?</li>
+                        <li>W przeczeniach dodajemy NOT: I <span class="brown">can</span> NOT (can't), You <span class="brown">should</span> NOT (shouldn't)</li>
+                    </ul>
+                    <p>Czasowniki modalne mogą występować we wszystkich konstrukcjach, które poznaliśmy dla <span class="brown">will</span>:</p>
+                    <ul>
+                        <li>Z <span class="blue">be</span> + <span class="purple">-ing</span>: "You <span class="brown">should</span> <span class="blue">be</span> <strong>study</strong><span class="purple">ing</span>" (Powinieneś się uczyć) (dosłownie: Ty powinieneś być uczący się)</li>
+                        <li>Z <span class="green">have</span> + <span class="orange">-ed</span>: "I <span class="brown">should</span> <span class="green">have</span> <strong>call</strong><span class="orange">ed</span>" (Powinienem był zadzwonić) (dosłownie: Powinienem mieć zadzwonione)</li>
+                    </ul>
+
+                    <div class="note mark">
+                        <p>Zadziwiające, prawda? Wystarczy znać znaczenie tych słów i cała "trudność" znika! Nie ma tu żadnej specjalnej gramatyki - tylko proste słowa w logicznych konstrukcjach. Angielski znów okazuje się prostszy niż myślałeś(-aś)! 😊</p>
+                    </div>
+                </div>
+
+                <div id="przyszl-robic" class="subtab-content">
+                    <h3>Być robiącym w przyszłości: "I <span class="brown">will</span> <span class="blue">be</span> <strong>work</strong><span class="purple">ing</span>" = "Będę pracował"</h3>
+                    <p>Świetna wiadomość! 🎯 Ta konstrukcja działa dokładnie tak samo jak "być robiącym" w teraźniejszości i przeszłości, które już poznaliśmy! Wystarczy dodać <span class="brown">will</span> na początku i gotowe!</p>
+
+                    <p>Ta konstrukcja (tradycyjnie nazywana "Future Continuous" czyli przyszły ciągły - traktujemy <span class="brown">will</span> <span class="blue">be</span> jako przyszły a zaraz po tym mamy formę z <span class="purple">ing</span> czyli ciągłą) pokazuje proces, który będzie trwał w przyszłości - dokładnie tak samo jak opisywaliśmy procesy w teraźniejszości i przeszłości, tylko że tym razem będą one miały miejsce w przyszłości.</p>
+                    <ul>
+                        <li>I <span class="brown">will</span> <span class="blue">be</span> <strong>work</strong><span class="purple">ing</span> late tonight = Ja będę pracował późno dziś wieczorem (dosłownie: Ja będę pracujący późno dziś wieczorem / Ja wolę być pracujący późno dziś wieczorem)</li>
+                        <li>You <span class="brown">will</span> <span class="blue">be</span> <strong>sleep</strong><span class="purple">ing</span> when I call = Ty będziesz spał(-a), kiedy zadzwonię (dosłownie: Ty będziesz śpiący(-a), kiedy zadzwonię / Ty wolisz być śpiący(-a), kiedy zadzwonię)</li>
+                        <li>She <span class="brown">will</span> <span class="blue">be</span> <strong>study</strong><span class="purple">ing</span> all day = Ona będzie się uczyła cały dzień (dosłownie: Ona będzie ucząca się cały dzień / Ona woli być ucząca się cały dzień)</li>
+                        <li>They <span class="brown">will</span> <span class="blue">be</span> <strong>wait</strong><span class="purple">ing</span> for us = Oni będą na nas czekać (dosłownie: Oni będą czekający na nas / Oni wolą być czekający na nas)</li>
+                    </ul>
+
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Mówisz, co będziesz robić jutro o konkretnej godzinie: "At 3 pm tomorrow, I <span class="brown">will</span> <span class="blue">be</span> <strong>work</strong><span class="purple">ing</span> in my office" (Jutro o 15 będę pracował w biurze) (dosłownie: Jutro o 15 będę pracujący w moim biurze / Jutro o 15 wolę być pracujący w moim biurze)</li>
+                            <li>Opisujesz, co będzie się działo, gdy ktoś zadzwoni: "When you call, we <span class="brown">will</span> <span class="blue">be</span> <strong>hav</strong><span class="purple">ing</span> dinner" (Kiedy zadzwonisz, będziemy jedli obiad) (dosłownie: Kiedy zadzwonisz, będziemy mający obiad / Kiedy zadzwonisz, wolimy być mający obiad)</li>
+                            <li>Informujesz o planach na przyszły tydzień: "Next week, I <span class="brown">will</span> <span class="blue">be</span> <strong>study</strong><span class="purple">ing</span> for my exams" (W przyszłym tygodniu będę się uczył do egzaminów) (dosłownie: W przyszłym tygodniu będę uczący się do moich egzaminów / W przyszłym tygodniu wolę być uczący się do moich egzaminów)</li>
+                        </ul>
+                        <p>We wszystkich tych przypadkach opisujesz proces, który będzie trwał w określonym momencie w przyszłości. Mówisz o tym, że "będziesz robiący" coś w konkretnym czasie.</p>
+                    </div>
+
+                    <p>W pytaniach przestawiamy <span class="brown">will</span> na początek:</p>
+                    <ul>
+                        <li><span class="brown">Will</span> you <span class="blue">be</span> <strong>work</strong><span class="purple">ing</span> tomorrow? = Czy ty będziesz pracował(-a) jutro? (dosłownie: Będziesz ty pracujący(-a) jutro? / Wolisz ty być pracujący(-a) jutro?)</li>
+                        <li><span class="brown">Will</span> she <span class="blue">be</span> <strong>wait</strong><span class="purple">ing</span> for us? = Czy ona będzie na nas czekać? (dosłownie: Będzie ona czekająca na nas? / Woli ona być czekająca na nas?)</li>
+                        <li><span class="brown">Will</span> they <span class="blue">be</span> <strong>stay</strong><span class="purple">ing</span> with us? = Czy oni będą z nami zostawać? (dosłownie: Będą oni zostający z nami? / Wolą oni być zostający z nami?)</li>
+                    </ul>
+
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="brown">will</span> NOT (won't) <span class="blue">be</span> <strong>work</strong><span class="purple">ing</span> = Ja nie będę pracował (dosłownie: Ja nie będę pracujący / Ja wolę nie być pracujący)</li>
+                        <li>She <span class="brown">will</span> NOT (won't) <span class="blue">be</span> <strong>sleep</strong><span class="purple">ing</span> = Ona nie będzie spała (dosłownie: Ona nie będzie śpiąca / Ona woli nie być śpiąca)</li>
+                        <li>They <span class="brown">will</span> NOT (won't) <span class="blue">be</span> <strong>wait</strong><span class="purple">ing</span> = Oni nie będą czekać (dosłownie: Oni nie będą czekający / Oni wolą nie być czekający)</li>
+                    </ul>
+                </div>
+
+                <div id="przyszl-zrobione" class="subtab-content">
+                    <h3>Mieć zrobione w przyszłości: "I <span class="brown">will</span> <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span>" = "Skończę (przed określonym czasem)"</h3>
+                    <p>Nadszedł czas na naszą "maszynę czasu" w przyszłości! 🚀 Ta konstrukcja to nic innego jak "mieć zrobione" (Present Perfect) przesunięte w przyszłość za pomocą <span class="brown">will</span>. Jak zobaczysz, system jest nadal bardzo logiczny!</p>
+
+                    <p>Ta konstrukcja (tradycyjnie nazywana "Future Perfect Simple" czyli przyszły dokonany prosty - traktujemy <span class="brown">will</span> <span class="green">have</span> jako przyszły i zaraz po tym mamy formę dokonaną prostą bez <span class="purple">ing</span>) pokazuje, że coś będzie dokonane, skończone w określonym momencie w przyszłości - będziesz miał coś zrobione przed konkretnym czasem.</p>
+                    <ul>
+                        <li>I <span class="brown">will</span> <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span> by tomorrow = Ja skończę do jutra (dosłownie: Ja będę mieć skończone do jutra / Ja wolę mieć skończone do jutra)</li>
+                        <li>You <span class="brown">will</span> <span class="green">have</span> <strong>learn</strong><span class="orange">ed</span> a lot by Friday = Ty nauczysz się dużo do piątku (dosłownie: Ty będziesz mieć nauczone dużo do piątku / Ty wolisz mieć nauczone dużo do piątku)</li>
+                        <li>She <span class="brown">will</span> <span class="green">have</span> <strong>solv</strong><span class="orange">ed</span> the problem by Monday = Ona rozwiąże problem do poniedziałku (dosłownie: Ona będzie mieć rozwiązane problem do poniedziałku / Ona woli mieć rozwiązane problem do poniedziałku)</li>
+                        <li>They <span class="brown">will</span> <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span> the work = Oni skończą pracę (dosłownie: Oni będą mieć skończone pracę / Oni wolą mieć skończone pracę)</li>
+                    </ul>
+
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Zapewniasz, że zdążysz z zadaniem: "I <span class="brown">will</span> <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span> the report by tomorrow morning" (Skończę raport do jutra rana) (dosłownie: Będę mieć skończone raport do jutra rana / Wolę mieć skończone raport do jutra rana)</li>
+                            <li>Mówisz o osiągnięciach w przyszłości: "By the end of this year, I <span class="brown">will</span> <span class="green">have</span> <strong>save</strong><span class="orange">d</span> enough money for a car" (Do końca roku odłożę wystarczająco pieniędzy na samochód) (dosłownie: Do końca roku będę mieć zaoszczędzone wystarczająco pieniędzy na samochód / Do końca roku wolę mieć zaoszczędzone wystarczająco pieniędzy na samochód)</li>
+                            <li>Opisujesz, co się stanie przed konkretnym momentem: "The plane <span class="brown">will</span> <span class="green">have</span> <strong>land</strong><span class="orange">ed</span> before you arrive at the airport" (Samolot wyląduje, zanim dotrzesz na lotnisko) (dosłownie: Samolot będzie mieć wylądowane, zanim dotrzesz na lotnisko / Samolot woli mieć wylądowane, zanim dotrzesz na lotnisko)</li>
+                        </ul>
+                        <p>W każdym przypadku mówisz o czymś, co będzie zakończone przed określonym momentem w przyszłości. Będziesz już "miał coś zrobione" przed konkretnym czasem.</p>
+                        
+                        <p>Po polsku też możemy to wyrazić podobnie: "Będę miał przepracowane 5 lat w tej firmie w styczniu przyszłego roku" - i właśnie tak działa angielskie Future Perfect!</p>
+                    </div>
+
+                    <p>W pytaniach przestawiamy <span class="brown">will</span> na początek:</p>
+                    <ul>
+                        <li><span class="brown">Will</span> you <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span> by Friday? = Czy ty skończysz do piątku? (dosłownie: Będziesz ty mieć skończone do piątku? / Wolisz ty mieć skończone do piątku?)</li>
+                        <li><span class="brown">Will</span> she <span class="green">have</span> <strong>solv</strong><span class="orange">ed</span> the problem? = Czy ona rozwiąże problem? (dosłownie: Będzie ona mieć rozwiązane problem? / Woli ona mieć rozwiązane problem?)</li>
+                        <li><span class="brown">Will</span> they <span class="green">have</span> <strong>arriv</strong><span class="orange">ed</span> by then? = Czy oni przybędą do tego czasu? (dosłownie: Będą oni mieć przybyte do tego czasu? / Wolą oni mieć przybyte do tego czasu?)</li>
+                    </ul>
+
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="brown">will</span> NOT (won't) <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span> the report by tomorrow morning = Ja nie skończę raportu do jutra rana (dosłownie: Ja będę nie mieć skończone raport do jutra rana / Ja wolę nie mieć skończone raport do jutra rana)</li>
+                        <li>She <span class="brown">will</span> NOT (won't) <span class="green">have</span> <strong>solv</strong><span class="orange">ed</span> it by the deadline = Ona nie rozwiąże tego do terminu (dosłownie: Ona będzie nie mieć rozwiązane to do terminu / Ona woli nie mieć rozwiązane to do terminu)</li>
+                        <li>They <span class="brown">will</span> NOT (won't) <span class="green">have</span> <strong>arriv</strong><span class="orange">ed</span> by the time we start = Oni nie przybędą do czasu, gdy zaczniemy (dosłownie: Oni będą nie mieć przybyte do czasu, gdy zaczniemy / Oni wolą nie mieć przybyte do czasu, gdy zaczniemy)</li>
+                    </ul>
+                </div>
+
+                <div id="przyszl-odbyte" class="subtab-content">
+                    <h3>Mieć odbyte robienie w przyszłości: "I <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span>" = "Będę pracował (przez określony czas przed konkretnym momentem)"</h3>
+                    <p>Nadchodzi ulubiona konstrukcja językowych koneserów! 🧩 To jak składanie wszystkich puzzli razem - łączymy <span class="brown">will</span>, <span class="green">have</span>, <span class="orange">been</span> i <span class="purple">-ing</span> w jednym miejscu! Nie przejmuj się - jeśli rozumiesz poprzednie konstrukcje, ta też jest logiczna!</p>
+
+                    <p>Ta konstrukcja (tradycyjnie nazywana "Future Perfect Continuous" czyli przyszły dokonany ciągły - ponownie traktujemy <span class="brown">will</span> <span class="green">have</span> jako przyszły, mamy <span class="orange">been</span> czyli formę dokonaną i formę z <span class="purple">ing</span>, czyli ciągłą) pokazuje, ile procesu będziemy mieli za sobą (odbytego) w określonym momencie w przyszłości. Mówi o trwającym procesie, do konkretnego punktu w przyszłości i często mówimy ile tego procesu będzie dokonane.</p>
+                    <ul>
+                        <li>I <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> for 10 hours by 4 pm tomorrow = Ja będę pracował przez 10 godzin do 16:00 jutro (dosłownie: Ja będę mieć odbyte pracowanie przez 10 godzin do 16:00 jutro / Ja wolę mieć odbyte pracowanie przez 10 godzin do 16:00 jutro)</li>
+                        <li>You <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> for two hours by the time I arrive = Ty będziesz czekał(-a) przez dwie godziny do czasu, gdy przybędę (dosłownie: Ty będziesz mieć odbyte czekanie przez dwie godziny do czasu, gdy przybędę / Ty wolisz mieć odbyte czekanie przez dwie godziny do czasu, gdy przybędę)</li>
+                        <li>She <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>study</strong><span class="purple">ing</span> for six months when she takes the exam = Ona będzie się uczyła przez sześć miesięcy, kiedy podejdzie do egzaminu (dosłownie: Ona będzie mieć odbyte uczenie się przez sześć miesięcy, kiedy podejdzie do egzaminu / Ona woli mieć odbyte uczenie się przez sześć miesięcy, kiedy podejdzie do egzaminu)</li>
+                        <li>They <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>liv</strong><span class="purple">ing</span> here for 10 years by next January = Oni będą mieszkać tutaj przez 10 lat do następnego stycznia (dosłownie: Oni będą mieć odbyte mieszkanie tutaj przez 10 lat do następnego stycznia / Oni wolą mieć odbyte mieszkanie tutaj przez 10 lat do następnego stycznia)</li>
+                    </ul>
+
+                    <div class="situation mark">
+                        <h4>Kiedy tak mówimy?</h4>
+                        <p>Wyobraź sobie takie sytuacje:</p>
+                        <ul>
+                            <li>Mówisz o swoim stażu pracy w przyszłości: "By next year, I <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> here for 10 years" (W przyszłym roku będę pracował tu już 10 lat) (dosłownie: W przyszłym roku ja będę mieć odbyte pracowanie tutaj przez 10 lat / W przyszłym roku ja wolę mieć odbyte pracowanie tutaj przez 10 lat)</li>
+                            <li>Opisujesz, jak długo będziesz czekać: "By the time you arrive, I <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> for three hours" (Kiedy przyjdziesz, będę czekał już trzy godziny) (dosłownie: Kiedy przyjdziesz, ja będę mieć odbyte czekanie przez trzy godziny / Kiedy przyjdziesz, ja wolę mieć odbyte czekanie przez trzy godziny)</li>
+                            <li>Planujesz naukę: "By June, I <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>study</strong><span class="purple">ing</span> English for two years" (Do czerwca będę uczył się angielskiego już dwa lata) (dosłownie: Do czerwca ja będę mieć odbyte uczenie się angielskiego przez dwa lata / Do czerwca ja wolę mieć odbyte uczenie się angielskiego przez dwa lata)</li>
+                        </ul>
+                        <p>W każdym przypadku opisujesz proces, który będzie trwał do określonego momentu w przyszłości. Podkreślasz, ile czasu już "odbędziesz" do konkretnego momentu w przyszłości.</p>
+                    </div>
+
+                    <p>W pytaniach przestawiamy <span class="brown">will</span> na początek:</p>
+                    <ul>
+                        <li><span class="brown">Will</span> you <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> here for long by the time you retire? = Czy ty będziesz pracował(-a) tutaj długo do czasu przejścia na emeryturę? (dosłownie: Będziesz ty mieć odbyte pracowanie tutaj długo do czasu przejścia na emeryturę? / Wolisz ty mieć odbyte pracowanie tutaj długo do czasu przejścia na emeryturę?)</li>
+                        <li><span class="brown">Will</span> she <span class="green">have</span> <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> for us by the time we arrive? = Czy ona będzie na nas czekać do czasu, gdy przybędziemy? (dosłownie: Będzie ona mieć odbyte czekanie na nas do czasu, gdy przybędziemy? / Woli ona mieć odbyte czekanie na nas do czasu, gdy przybędziemy?)</li>
+                        <li><span class="brown">Will</span> they <span class="green">have</span> <span class="orange">been</span> <strong>travel</strong><span class="purple">ing</span> all day by the time they reach their destination? = Czy oni będą podróżować cały dzień do czasu, gdy dotrą do celu? (dosłownie: Będą oni mieć odbyte podróżowanie cały dzień do czasu, gdy dotrą do celu? / Wolą oni mieć odbyte podróżowanie cały dzień do czasu, gdy dotrą do celu?)</li>
+                    </ul>
+
+                    <p>W przeczeniach dodajemy NOT:</p>
+                    <ul>
+                        <li>I <span class="brown">will</span> NOT (won't) <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> here for five years when I get my promotion = Ja nie będę pracował tutaj przez pięć lat, kiedy dostanę awans (dosłownie: Ja będę mieć nie odbyte pracowanie tutaj przez pięć lat, kiedy dostanę awans / Ja wolę mieć nie odbyte pracowanie tutaj przez pięć lat, kiedy dostanę awans)</li>
+                        <li>She <span class="brown">will</span> NOT (won't) <span class="green">have</span> <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> long by the time we get there = Ona nie będzie czekać długo do czasu, gdy tam dotrzemy (dosłownie: Ona będzie mieć nie odbyte czekanie długo do czasu, gdy tam dotrzemy / Ona woli mieć nie odbyte czekanie długo do czasu, gdy tam dotrzemy)</li>
+                        <li>They <span class="brown">will</span> NOT (won't) <span class="green">have</span> <span class="orange">been</span> <strong>liv</strong><span class="purple">ing</span> here for ten years when they move = Oni nie będą tutaj mieszkać przez dziesięć lat, kiedy się przeprowadzą (dosłownie: Oni będą mieć nie odbyte mieszkanie tutaj przez dziesięć lat, kiedy się przeprowadzą / Oni wolą mieć nie odbyte mieszkanie tutaj przez dziesięć lat, kiedy się przeprowadzą)</li>
+                    </ul>
+
+                    <div class="note mark">
+                        <p>Zauważ, że wszystkie konstrukcje z <span class="brown">will</span> to tak naprawdę kombinacja:</p>
+                        <ul>
+                            <li>Podstawowa forma: <span class="brown">will</span> + czasownik</li>
+                            <li>"Continuous": <span class="brown">will</span> + <span class="blue">be</span> + czasownik z <span class="purple">-ing</span></li>
+                            <li>"Perfect": <span class="brown">will</span> + <span class="green">have</span> + czasownik z <span class="orange">-ed/forma nieregularna</span></li>
+                            <li>"Perfect Continuous": <span class="brown">will</span> + <span class="green">have</span> + <span class="orange">been</span> + czasownik z <span class="purple">-ing</span></li>
+                        </ul>
+                        
+                        <p>Ta sama logika działa we wszystkich "czasach" - to po prostu różne kombinacje kilku prostych elementów! 🧩 Angielska gramatyka przypomina zestaw klocków, które można ze sobą łączyć w różnych konfiguracjach.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zakładka: Zamienność -->
+        <div id="tab-zamiennosc" class="tab-content">
+            <h2 id="zamiennosc">6. Ta sama treść, różne formy - zamienność w angielskim</h2>
+            <p>Dotarliśmy do mojej ulubionej części! 🎁 Jedną z najbardziej fascynujących i wyzwalających cech języka angielskiego jest to, że często możemy wyrazić tę samą treść na różne sposoby. Dlatego właśnie czasem słyszysz rodowity brytyjski akcent "I <span class="green">have</span> just <strong>arrive</strong><span class="orange">d</span>", a chwilę później amerykański "I just <strong>arrive</strong><span class="red">d</span>" - i oba zdania oznaczają dokładnie to samo!</p>
+
+            <div class="note mark">
+                <p>Ta elastyczność to prawdziwa <strong>dobra wiadomość</strong> dla uczących się! Zamiast sztywnych reguł, masz wiele poprawnych opcji do wyboru. To daje ci większą swobodę w mówieniu i mniejszy stres podczas nauki. 😊</p>
+            </div>
+
+            <h3>Kiedy możemy użyć prostszej formy zamiast bardziej złożonej</h3>
+
+            <h4>Present Perfect Simple vs Past Simple</h4>
+            <p>Porównaj te dwie drogi prowadzące do tego samego celu:</p>
+            <ul>
+              <li>"I <span class="green">have</span> <span class="orange">visited</span> Paris" = "I <strong>visit</strong><span class="red">ed</span> Paris" = "Odwiedziłem Paryż" (dosłownie: "Ja mam odwiedzone Paryż" = "Ja odwiedziłem Paryż")</li>
+            <li>"I <span class="green">have</span> <span class="orange">lost</span> my keys" = "I <span class="red">lost</span> my keys" = "Zgubiłem klucze" (dosłownie: "Ja mam zgubione moje klucze" = "Ja zgubiłem moje klucze")</li>
+            <li>"I <span class="green">have</span> <span class="orange">finished</span> my work" = "I <strong>finish</strong><span class="red">ed</span> my work" = "Skończyłem swoją pracę" (dosłownie: "Ja mam skończone moją pracę" = "Ja skończyłem moją pracę")</li>
+            </ul>
+
+            <p>Kiedy można zamieniać? Gdy:</p>
+            <ul>
+                <li>Nie ma określonego czasu w przeszłości (nie mówimy "yesterday", "last week" itp.)</li>
+                <li>Kontekst jest jasny dla rozmówcy</li>
+            </ul>
+
+            <p>UWAGA: NIE można używać Present Perfect Simple, gdy jest określony czas w przeszłości:</p>
+            <ul>
+                <li>✓ "I <strong>visit</strong><span class="red">ed</span> Paris last year" = "Odwiedziłem Paryż w zeszłym roku" (dosłownie: "Ja odwiedziłem Paryż w zeszłym roku")</li>
+                <li>✗ "I <span class="green">have</span> <strong>visit</strong><span class="orange">ed</span> Paris last year" (dosłownie: "Ja mam odwiedzone Paryż w zeszłym roku" co logicznie nie ma sensu. Jeżeli zrobiłem coś w zeszłym roku, to muszę użyć czasu przeszłego)</li>
+            </ul>
+
+            <div class="note mark">
+                <p><strong>Co jest typowe?</strong> W większości kontekstów, pierwsza forma (Present Perfect Simple) jest bardziej standardowa w brytyjskim angielskim, podczas gdy druga (Past Simple) częściej pojawia się w amerykańskim angielskim. Forma "I <span class="green">have</span> <span class="orange">lost</span> my keys" brzmi bardziej formalnie i precyzyjniej niż "I <span class="red">lost</span> my keys", ale obie są całkowicie zrozumiałe i akceptowalne w codziennej rozmowie.</p>
+            </div>
+
+            <h4>Present Perfect Continuous vs inne formy</h4>
+            <p>Tutaj jeszcze więcej wolności wyboru! 🎯</p>
+            <ul>
+              <li><strong>Kontekst:</strong> Wracasz do domu po ciężkim dniu pracy i mówisz do współmieszkańca:<br>
+              "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> all day today" = "I <span class="blue">was</span> <strong>work</strong><span class="purple">ing</span> all day today" = "I <strong>work</strong><span class="red">ed</span> all day today" = "Pracowałem cały dzień dzisiaj" (dosłownie: "Ja mam odbyte pracowanie cały dzień dzisiaj" = "Ja byłem pracujący cały dzień dzisiaj" = "Ja pracowałem cały dzień dzisiaj")</li>  
+              <li><strong>Kontekst:</strong> Ktoś dzwoni i pyta, co aktualnie robisz:<br>
+              "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> on this project" = "I <span class="blue">am</span> <strong>work</strong><span class="purple">ing</span> on this project" = "Pracuję nad tym projektem" (dosłownie: "Ja mam odbyte pracowanie nad tym projektem" = "Ja jestem pracujący nad tym projektem")</li>
+              <li><strong>Kontekst:</strong> Przychodzisz na umówione spotkanie i widzisz, że ktoś już czeka:<br>
+              "<span class="green">Have</span> you <span class="orange">been</span> <strong>wait</strong><span class="purple">ing</span> long?" = "<span class="blue">Are</span> you <strong>wait</strong><span class="purple">ing</span> long?" = "Czy czekasz długo?" (dosłownie: "Masz ty odbyte czekanie długo?" = "Jesteś ty czekający długo?")</li>
+            </ul>
+
+            <div class="note mark">
+              <p><strong>Co jest typowe?</strong> Forma Present Perfect Continuous (np. "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> all day") jest najbardziej standardowa w brytyjskim angielskim, gdy mówimy o czynnościach trwających do teraźniejszości. Forma Past Continuous (np. "I <span class="blue">was</span> <strong>work</strong><span class="purple">ing</span> all day") oraz Past Simple (np. "I <strong>work</strong><span class="red">ed</span> all day") są częściej używane w amerykańskim angielskim dla zakończonych, ale niedawnych czynności. Forma Present Continuous (np. "I <span class="blue">am</span> <strong>work</strong><span class="purple">ing</span> on a project") jest naturalna przy opisywaniu aktualnie wykonywanych czynności lub przy odpowiadaniu na pytanie "co robisz?".</p>
+              
+              <p>Wybór między tymi formami często zależy od kontekstu. Na przykład:
+              <br>- Gdy wracasz do domu po pracy, możesz powiedzieć zarówno "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> all day" (podkreślając wpływ tej pracy na teraźniejszość, np. zmęczenie) jak i "I <span class="blue">was</span> <strong>work</strong><span class="purple">ing</span> all day" (skupiając się na samym fakcie pracy, która już się zakończyła).
+              <br>- Gdy ktoś pyta, co robisz, możesz odpowiedzieć "I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> on this project" (podkreślając, że zajmujesz się tym już od jakiegoś czasu) lub "I <span class="blue">am</span> <strong>work</strong><span class="purple">ing</span> on this project" (opisując po prostu swoją aktualną czynność).</p>
+            </div>
+
+            <h4>Past Perfect Simple vs Past Simple</h4>
+            <ul>
+                <li>"When he arrived, I <span class="green">had</span> already <strong>finish</strong><span class="orange">ed</span>" = "I <strong>finish</strong><span class="red">ed</span> before he arrived" = "Skończyłem, zanim on przybył" (dosłownie: "Kiedy on przybył, ja miałem już skończone" = "Ja skończyłem zanim on przybył")</li>
+                <li>"She <span class="green">had</span> <span class="orange">eaten</span> dinner before I came" = "She <span class="red">ate</span> dinner before I came" = "Zjadła obiad, zanim przyszedłem" (dosłownie: "Ona miała zjedzone obiad, zanim ja przybyłem" = "Ona zjadła obiad, zanim ja przybyłem")</li>
+            </ul>
+
+            <div class="note mark">
+                <p><strong>Co jest typowe?</strong> W kontekstach, gdzie chcemy wyraźnie podkreślić sekwencję zdarzeń (co stało się najpierw), forma Past Perfect Simple "I <span class="green">had</span> already <strong>finish</strong><span class="orange">ed</span>" jest bardziej precyzyjna i typowa w formalnym języku. W codziennych rozmowach i w amerykańskim angielskim, drugie formy są powszechnie używane i całkowicie akceptowalne. W języku pisanym Past Perfect Simple nadal dominuje.</p>
+            </div>
+
+            <h4>Past Perfect Continuous vs Past Continuous</h4>
+            <ul>
+                <li>"I <span class="green">had</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> for 3 hours when he called" = "I <span class="blue">was</span> <strong>work</strong><span class="purple">ing</span> for 3 hours when he called" = "Pracowałem od 3 godzin, kiedy zadzwonił" (dosłownie: "Ja miałem odbyte pracowanie przez 3 godziny, kiedy on zadzwonił" = "Ja byłem pracujący przez 3 godziny, kiedy on zadzwonił")</li>
+            </ul>
+
+            <div class="note mark">
+                <p><strong>Co jest typowe?</strong> Past Perfect Continuous jest szczególnie przydatny, gdy chcemy podkreślić czas trwania czynności przed konkretnym momentem w przeszłości. W codziennej mowie, szczególnie w amerykańskim angielskim, Past Continuous często zastępuje Past Perfect Continuous, zwłaszcza gdy kontekst jasno wskazuje na sekwencję wydarzeń.</p>
+            </div>
+
+            <h4>Future Perfect Simple vs Future Simple</h4>
+            <ul>
+                <li>"By next week, I <span class="brown">will</span> <span class="green">have</span> <strong>finish</strong><span class="orange">ed</span> the project" = "By next week, I <span class="brown">will</span> <strong>finish</strong> the project" = "Do następnego tygodnia skończę projekt" (dosłownie: "Do następnego tygodnia ja będę mieć skończone projekt" / "Do następnego tygodnia ja wolę mieć skończone projekt" = "Do następnego tygodnia ja wolę skończyć projekt")</li>
+            </ul>
+
+            <div class="note mark">
+                <p><strong>Co jest typowe?</strong> Formy Future Perfect Simple są rzadziej używane w codziennej mowie, nawet przez rodzimych użytkowników. Forma "By next week, I <span class="brown">will</span> <strong>finish</strong> the project" jest znacznie częstsza w codziennych rozmowach. Future Perfect Simple pojawia się głównie w formalnych kontekstach, oficjalnych dokumentach lub gdy chcemy wyraźnie podkreślić, że coś zostanie zakończone do określonego momentu w przyszłości.</p>
+            </div>
+
+            <h4>Future Perfect Continuous vs Future Continuous</h4>
+            <ul>
+                <li>"In June, I <span class="brown">will</span> <span class="green">have</span> <span class="orange">been</span> <strong>teach</strong><span class="purple">ing</span> for 10 years" = "In June, I <span class="brown">will</span> <span class="blue">be</span> <strong>teach</strong><span class="purple">ing</span> for 10 years" = "W czerwcu będę uczyć już 10 lat" (dosłownie: "W czerwcu ja będę mieć odbyte uczenie przez 10 lat" / "W czerwcu ja wolę mieć odbyte uczenie przez 10 lat" = "W czerwcu ja będę uczący przez 10 lat" / "W czerwcu ja wolę być uczący przez 10 lat")</li>
+            </ul>
+
+            <div class="note mark">
+                <p><strong>Co jest typowe?</strong> Future Perfect Continuous jest najmniej używaną formą ze wszystkich konstrukcji czasowych w codziennym angielskim. W większości przypadków Future Continuous lub nawet prostsze formy są preferowane, chyba że naprawdę chcemy podkreślić długość trwania czynności do określonego momentu w przyszłości. W języku mówionym Future Perfect Continuous jest rzadkością nawet wśród rodzimych użytkowników.</p>
+            </div>
+
+            <h3>Różnice regionalne (brytyjski vs amerykański) 🌍</h3>
+            <p>Jedną z głównych różnic między brytyjskim a amerykańskim angielskim jest właśnie zamienność czasów:</p>
+
+            <ul>
+                <li>Brytyjczycy częściej używają form Perfect (z <span class="green">have/has/had</span>)</li>
+                <li>Amerykanie częściej wybierają prostsze formy (Past Simple, Present Simple)</li>
+            </ul>
+
+            <p>Przykłady:</p>
+            <ul>
+                <li>Brytyjski: "I <span class="green">have</span> just <strong>arriv</strong><span class="orange">ed</span>" = "Właśnie przybyłem" (dosłownie: "Ja mam właśnie przybyte")</li>
+                <li>Amerykański: "I just <strong>arriv</strong><span class="red">ed</span>" = "Właśnie przybyłem" (dosłownie: "Ja właśnie przybyłem")</li>
+            </ul>
+
+            <ul>
+                <li>Brytyjski: "<span class="green">Have</span> you <span class="orange">seen</span> the new film?" = "Czy widziałeś nowy film?" (dosłownie: "Masz ty widziane nowy film?")</li>
+                <li>Amerykański: "<strong><span class="underline"><span class="red">DID</span></span></strong> you <strong>see</strong> the new film?" = "Czy widziałeś nowy film?"</li>
+            </ul>
+
+            <div class="situation mark">
+                <h4>Przykłady z codziennych sytuacji</h4>
+                
+                <h5>Spóźnienie na spotkanie:</h5>
+                <ul>
+                 <li>"Sorry I'm late, I <span class="green">have</span> <span class="orange">overslept</span>" (brytyjski styl) = "Przepraszam za spóźnienie, zaspałem" (dosłownie: "Przepraszam że jestem spóźniony, ja mam zaspane")</li>
+            <li>"Sorry I'm late, I <span class="red">overslept</span>" (amerykański styl) = "Przepraszam za spóźnienie, zaspałem" (dosłownie: "Przepraszam, że jestem spóźniony, ja zaspałem")</li>
+                </ul>
+                <p>Obie formy są poprawne i przekazują tę samą informację! 👏</p>
+                
+                <h5>Zmęczenie po pracy:</h5>
+                <ul>
+                    <li>"I'm tired because I <span class="green">have</span> <span class="orange">been</span> <strong>work</strong><span class="purple">ing</span> all day" = "Jestem zmęczony, bo pracowałem cały dzień" (dosłownie: "Jestem zmęczony, ponieważ ja mam odbyte pracowanie cały dzień")</li>
+                    <li>"I'm tired because I <span class="blue">was</span> <strong>work</strong><span class="purple">ing</span> all day" = "Jestem zmęczony, bo pracowałem cały dzień" (dosłownie: "Jestem zmęczony, ponieważ ja byłem pracujący cały dzień")</li>
+                    <li>"I'm tired because I <strong>work</strong><span class="red">ed</span> all day" = "Jestem zmęczony, bo pracowałem cały dzień" (dosłownie: "Jestem zmęczony, ponieważ ja pracowałem cały dzień")</li>
+                </ul>
+                <p>Wszystkie te zdania są poprawne! Wybierz, które brzmi dla Ciebie najlepiej! 😊</p>
+                
+                <h5>Pytanie o doświadczenie:</h5>
+                <ul>
+                    <li>"<span class="green">Have</span> you <strong>tri</strong><span class="orange">ed</span> the new restaurant?" = "Czy próbowałeś nowej restauracji?" (dosłownie: "Masz ty wypróbowane nową restaurację?")</li>
+                    <li>"<strong><span class="underline"><span class="red">DID</span></span></strong> you <strong>try</strong> the new restaurant?" = "Czy próbowałeś nowej restauracji?"</li>
+                </ul>
+                
+                <h5>Odpowiedź na "What's up?" (takie polskie "Co słychać"):</h5>
+                <ul>
+                    <li>"I <span class="green">have</span> <span class="orange">been</span> <strong>try</strong><span class="purple">ing</span> to fix my computer" = "Próbuję naprawić mój komputer" (dosłownie: "Ja mam odbyte próbowanie naprawić mój komputer")</li>
+                    <li>"I <span class="blue">am</span> <strong>try</strong><span class="purple">ing</span> to fix my computer" = "Próbuję naprawić mój komputer" (dosłownie: "Ja jestem próbujący naprawić mój komputer")</li>
+                </ul>
+            </div>
+
+            <div class="note mark">
+                <h4>Słowa kontekstowe - więcej elastyczności niż myślisz! 🎯</h4>
+                <p>Istnieje grupa słów w języku angielskim, które nazywam "słowami kontekstowymi" - są to wyrażenia takie jak "yet" (jeszcze), "never" (nigdy), "ever" (kiedykolwiek), "already" (już), które same w sobie niosą informację o czasie.</p>
+                
+                <p>W tradycyjnych podręcznikach często uczą nas, że te słowa "wymagają" użycia konkretnych czasów. Na przykład, że "yet" musi być używane z Present Perfect Simple. Ale to nieprawda! Te słowa dają kontekst czasowy, ale <strong>nie wymuszają</strong> konkretnej konstrukcji gramatycznej.</p>
+                
+                <h5>Przykłady z "yet" (jeszcze):</h5>
+                <ul>
+                    <li>British English: "<span class="green">Have</span> you <strong>finish</strong><span class="orange">ed</span> your homework yet?" = "Czy już skończyłeś pracę domową?" (dosłownie: "Masz ty skończone twoją pracę domową jeszcze?")</li>
+                    <li>American English: "<strong><span class="underline"><span class="red">DID</span></span></strong> you <strong>finish</strong> your homework yet?" = "Czy już skończyłeś pracę domową?" </li>
+                </ul>
+                
+                <h5>Przykłady z "never" (nigdy):</h5>
+                <ul>
+                    <li>British English: "I <span class="green">have</span> <strong>never</strong> <span class="orange">been</span> to Paris" = "Nigdy nie byłem w Paryżu" (dosłownie: "Ja mam nigdy bywane w Paryżu")</li>
+                    <li>American English: "I <strong>never</strong> <span class="red">went</span> to Paris" = "Nigdy nie byłem w Paryżu" (dosłownie: "Ja nigdy nie podążyłem do Paryża")</li>
+                </ul>
+                
+                <p>To samo działa z "already" (już), "ever" (kiedykolwiek) czy "just" (właśnie):</p>
+                <ul>
+                    <li>"She <span class="green">has</span> <strong>just</strong> <strong>arriv</strong><span class="orange">ed</span>" = "She <strong>just</strong> <strong>arriv</strong><span class="red">ed</span>" = "Ona właśnie przybyła" (dosłownie: "Ona ma właśnie przybyte" = "Ona właśnie przybyła")</li>
+                    <li>"<span class="green">Have</span> you <strong>ever</strong> <strong>visit</strong><span class="orange">ed</span> London?" = "<strong><span class="underline"><span class="red">DID</span></span></strong> you <strong>ever</strong> <strong>visit</strong> London?" = "Czy kiedykolwiek odwiedziłeś Londyn?" (dosłownie: "Masz ty kiedykolwiek odwiedzone Londyn?")</li>
+                </ul>
+                
+                <p>To fantastyczne, bo pokazuje, jak elastyczny jest język angielski! Samo słowo "yet", "never" czy "already" już mówi o kontekście czasowym, więc konstrukcja gramatyczna może być prostsza. To dlatego w amerykańskiej odmianie angielskiego często słyszy się prostsze formy - nie ma potrzeby podwójnego zaznaczania czasu.</p>
+                
+                <p>Ta obserwacja daje ci większą swobodę w mówieniu. Możesz użyć formy, która jest dla ciebie wygodniejsza, a i tak zostaniesz zrozumiany - przecież kontekst czasowy jest już zawarty w tych słówkach! 🎯</p>
+            </div>
+
+            <h3>Istotne obserwacje</h3>
+            <ol>
+                <li>Zamienność zależy od kontekstu - niektóre sytuacje pozwalają na więcej elastyczności niż inne.</li>
+                
+                <li>Często kluczowe są inne elementy zdania, które dają kontekst czasowy:
+                    <ul>
+                        <li>"for 5 years" (przez 5 lat)</li>
+                        <li>"since 2010" (od 2010 roku)</li>
+                        <li>"by next week" (do następnego tygodnia)</li>
+                        <li>"when I arrived" (kiedy przybyłem)</li>
+                    </ul>
+                </li>
+                
+                <li>Nie zawsze istnieje pełna zamienność - czasem forma Perfect nadaje nieco inny odcień znaczeniowy, podkreślając związek z teraźniejszością.</li>
+                
+                <li>W testach językowych często wymagana jest "oficjalna" forma Perfect, choć w życiu codziennym obie wersje są akceptowalne.</li>
+            </ol>
+
+            <div class="note mark">
+                <p>Najważniejsza lekcja? <strong>Język służy komunikacji, nie regułom</strong>. Różne formy to po prostu różne sposoby opowiedzenia tej samej historii. Czasem warto użyć bardziej złożonej formy dla precyzji, ale często prostszy sposób jest równie skuteczny. 🚀</p>
+            </div>
+        </div>
+
+        <!-- Zakładka: Praktyka -->
+        <div id="tab-praktyka" class="tab-content">
+            <h2 id="praktyka">7. Praktyczne zastosowanie - mów jak chcesz</h2>
+            <p>Dotarliśmy do najważniejszej części naszego przewodnika! 🏁 Całą tę wiedzę zebraliśmy po to, abyś mógł skutecznie komunikować się, a nie tylko zdawać testy z gramatyki. Czas odpowiedzieć na pytanie: jak to wszystko wykorzystać w prawdziwym życiu?</p>
+
+            <h3>Wybór formy zależy od tego, jak chcesz zaprezentować sytuację</h3>
+            <p>W języku angielskim masz luksus wyboru - możesz opowiadać o tych samych wydarzeniach na różne sposoby, w zależności od tego, co chcesz podkreślić:</p>
+
+            <div class="tips mark">
+                <h4>Ta sama sytuacja - różne perspektywy 🔎</h4>
+                <p>Wyobraź sobie, że uczysz się hiszpańskiego. Możesz to wyrazić na kilka sposobów:</p>
+                <ul>
+                    <li>"I <span class="blue">am</span> <strong>learn</strong><span class="purple">ing</span> Spanish" - podkreślasz proces, który trwa teraz = "Uczę się hiszpańskiego" (dosłownie: "Ja jestem uczący się hiszpańskiego")</li>
+                    <li>"I <strong>learn</strong> Spanish" - podkreślasz fakt, regularną aktywność = "Uczę się hiszpańskiego" (dosłownie: "Ja uczę się hiszpańskiego")</li>
+                    <li>"I <span class="green">have</span> <span class="orange">been</span> <strong>learn</strong><span class="purple">ing</span> Spanish for 2 years" - podkreślasz czas trwania procesu = "Uczę się hiszpańskiego od 2 lat" (dosłownie: "Ja mam odbyte uczenie się hiszpańskiego przez 2 lata")</li>
+                    <li>"I <span class="green">have</span> <strong>learn</strong><span class="orange">ed</span> a lot of Spanish" - podkreślasz rezultat = "Nauczyłem się dużo hiszpańskiego" (dosłownie: "Ja mam nauczone się dużo hiszpańskiego")</li>
+                </ul>
+                <p>Wszystkie te zdania mogą opisywać tę samą rzeczywistość - po prostu patrząc na nią pod innym kątem! Jak aparat fotograficzny z różnymi obiektywami - każdy pokazuje ten sam obiekt, ale inaczej go uwydatnia. 📸</p>
+            </div>
+
+            <h3>Nie ma "lepszej" czy "gorszej" formy - wszystko zależy od kontekstu</h3>
+            <p>W szkole często uczono nas, że formy Perfect są jakimś ideałem, do którego należy dążyć, a prostsze formy są "gorsze" lub "mniej poprawne". To nieprawda! 👎</p>
+
+            <h4>Dla rodzimych użytkowników języka angielskiego wybór formy to kwestia:</h4>
+            <ul>
+                <li>Regionalnego zwyczaju (brytyjski vs amerykański)</li>
+                <li>Osobistego stylu mówienia</li>
+                <li>Tego, co chcą podkreślić w danej sytuacji</li>
+                <li>Kontekstu rozmowy</li>
+            </ul>
+
+            <p>Na przykład pytanie o weekend:</p>
+            <ul>
+                <li>Brytyjczyk może zapytać: "<span class="green">Have</span> you <strong>ha</strong><span class="orange">d</span> a good weekend?" = "Czy miałeś dobry weekend?" (dosłownie: "Masz ty miane dobry weekend?")</li>
+                <li>Amerykanin prawdopodobnie zapyta: "<strong><span class="underline"><span class="red">DID</span></span></strong> you <strong>have</strong> a good weekend?" = "Czy miałeś dobry weekend?"</li>
+            </ul>
+
+            <p>I oba pytania są całkowicie poprawne! Twój rozmówca zrozumie cię niezależnie od tego, którą formę wybierzesz. 👍</p>
+
+
+            <h3>Najważniejsza jest komunikacja, nie reguły</h3>
+            <p>Pamiętaj o tym, co naprawdę ważne: <strong>skuteczne przekazanie myśli.</strong> 💬</p>
+
+            <p>Nawet jeśli popełnisz błąd gramatyczny, ale twoja wiadomość zostanie zrozumiana - to sukces! Rodzimi użytkownicy języka są bardzo tolerancyjni wobec drobnych błędów.</p>
+
+            <p>W rzeczywistości, to właśnie zbytnie skupianie się na idealnej gramatyce często prowadzi do tego, że uczący się boją się mówić. A najlepszy sposób na naukę języka to... używanie go!</p>
+        </div>
+    </div>
+
+    <script>
+        // Funkcja do obsługi głównych zakładek
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            
+            // Ukryj wszystkie zakładki
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            
+            // Usuń klasę "active" ze wszystkich przycisków
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            
+            // Pokaż wybraną zakładkę i oznacz przycisk jako aktywny
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        // Funkcja do obsługi pod-zakładek
+        function openSubtab(evt, subtabName) {
+            var i, subtabContent, subtabButtons;
+            
+            // Pobierz wszystkie pod-zakładki w tej samej grupie
+            var parent = evt.currentTarget.parentNode.nextElementSibling;
+            while (parent && !parent.classList.contains('subtab-content')) {
+                parent = parent.nextElementSibling;
+            }
+            
+            var group = evt.currentTarget.parentNode;
+            
+            // Ukryj wszystkie pod-zakładki w tej samej grupie
+            subtabContent = group.parentNode.getElementsByClassName("subtab-content");
+            for (i = 0; i < subtabContent.length; i++) {
+                subtabContent[i].style.display = "none";
+            }
+            
+            // Usuń klasę "active" ze wszystkich przycisków w tej grupie
+            subtabButtons = group.getElementsByClassName("subtab-button");
+            for (i = 0; i < subtabButtons.length; i++) {
+                subtabButtons[i].className = subtabButtons[i].className.replace(" active", "");
+            }
+            
+            // Pokaż wybraną pod-zakładkę i oznacz przycisk jako aktywny
+            document.getElementById(subtabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
+<!-- /wp:html -->
